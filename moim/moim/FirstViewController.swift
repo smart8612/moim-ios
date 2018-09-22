@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import WebKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var webView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let url = URL(string: "http://m.naver.com")
+        let request = URLRequest(url: url!)
+        webView.load(request)
     }
 
 
