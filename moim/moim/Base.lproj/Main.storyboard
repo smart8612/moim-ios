@@ -102,7 +102,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="6dU-ic-QCB" kind="modal" id="man-ig-lJE"/>
+                                    <segue destination="6dU-ic-QCB" kind="push" id="c2p-0L-pkk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9W-dm-NAd">
@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="-1709.5999999999999" y="-65.763546798029566"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="1nn-uA-Sm6">
             <objects>
-                <viewController id="6dU-ic-QCB" sceneMemberID="viewController">
+                <viewController id="6dU-ic-QCB" customClass="LoginViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ioz-9O-TaF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,13 +156,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="So4-RV-eGH"/>
+                                    <action selector="signInButtonClicked:" destination="6dU-ic-QCB" eventType="touchUpInside" id="TZR-C9-gXZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Xss-Am-iZe"/>
                     </view>
+                    <navigationItem key="navigationItem" id="EFK-VI-xX0"/>
+                    <connections>
+                        <outlet property="emailField" destination="NQS-Ry-Fpg" id="G0O-KG-rGh"/>
+                        <outlet property="passwordField" destination="d2c-UZ-udU" id="oYM-b7-rDL"/>
+                        <outlet property="signInButton" destination="5Ej-nM-Dbd" id="XQ8-nI-2N9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TmG-zd-svR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -238,7 +244,4 @@
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="raY-6w-C6V"/>
-    </inferredMetricsTieBreakers>
 </document>
