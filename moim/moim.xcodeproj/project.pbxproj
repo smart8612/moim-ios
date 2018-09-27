@@ -19,6 +19,7 @@
 		12C5B50A215274EF000A98E3 /* moimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5B509215274EF000A98E3 /* moimUITests.swift */; };
 		12C66FD8215CA536001A5680 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C66FD7215CA536001A5680 /* InitialViewController.swift */; };
 		12F0330F215CF6D000DC1020 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F0330E215CF6D000DC1020 /* LoginViewController.swift */; };
+		12F03311215D151600DC1020 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F03310215D151600DC1020 /* SignUpViewController.swift */; };
 		22388B9696819AFCE36E600B /* Pods_moimUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D10F39007B8F9074D8C558E /* Pods_moimUITests.framework */; };
 		8AB3FF901D29634E864E3D60 /* Pods_moimTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26216C4A2682BD4C2FEBF19F /* Pods_moimTests.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		12C5B50B215274EF000A98E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12C66FD7215CA536001A5680 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		12F0330E215CF6D000DC1020 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		12F03310215D151600DC1020 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1D10F39007B8F9074D8C558E /* Pods_moimUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moimUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		26216C4A2682BD4C2FEBF19F /* Pods_moimTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_moimTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E270C9010F79B9FB238F8C8 /* Pods-moim.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moim.release.xcconfig"; path = "Pods/Target Support Files/Pods-moim/Pods-moim.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,8 +127,9 @@
 				12C5B4E7215274EE000A98E3 /* AppDelegate.swift */,
 				12C5B4E9215274EE000A98E3 /* FirstViewController.swift */,
 				12C5B4EB215274EE000A98E3 /* AREventViewController.swift */,
-				12C5B4ED215274EE000A98E3 /* Main.storyboard */,
 				12F0330E215CF6D000DC1020 /* LoginViewController.swift */,
+				12C5B4ED215274EE000A98E3 /* Main.storyboard */,
+				12F03310215D151600DC1020 /* SignUpViewController.swift */,
 				12C66FD7215CA536001A5680 /* InitialViewController.swift */,
 				12C5B4F0215274EF000A98E3 /* Assets.xcassets */,
 				12C5B4F2215274EF000A98E3 /* LaunchScreen.storyboard */,
@@ -408,6 +411,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12F03311215D151600DC1020 /* SignUpViewController.swift in Sources */,
 				12C5B4EC215274EE000A98E3 /* AREventViewController.swift in Sources */,
 				12C5B4E8215274EE000A98E3 /* AppDelegate.swift in Sources */,
 				12C5B4EA215274EE000A98E3 /* FirstViewController.swift in Sources */,

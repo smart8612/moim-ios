@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  SignUpViewController.swift
 //  moim
 //
 //  Created by JeongTaek Han on 27/09/2018.
@@ -9,34 +9,35 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
-
+class SignUpViewController: UIViewController {
+    
     @IBOutlet weak var emailField: UITextField?
     @IBOutlet weak var passwordField: UITextField?
-    @IBOutlet weak var signInButton: UIButton?
+    @IBOutlet weak var signUpButton: UIButton?
     
     let fireBaseAuth = Auth.auth()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func signInButtonClicked(_ sender: UIButton) {
+    @IBAction func signUpButtonClicked(_ sender: UIButton) {
         guard let email = emailField?.text else { return }
         guard let password = passwordField?.text else { return }
         
-        fireBaseAuth.signIn(withEmail: email, password: password) { user, error in
+        fireBaseAuth.createUser(withEmail: email, password: password) { user, error in
             if error == nil && user != nil {
-                print("Sign In Complete")
+                print("user created")
             } else {
-                print("Error Occur: \(String(describing: error?.localizedDescription))")
+                print("Error Creating User: \(String(describing: error?.localizedDescription))")
             }
         }
-                
+        
     }
     
+
     /*
     // MARK: - Navigation
 
