@@ -77,6 +77,9 @@
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="AR Event" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="userInformation" destination="zEq-FU-wV5" id="ShL-qe-sDo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
