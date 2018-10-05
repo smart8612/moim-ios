@@ -13,7 +13,10 @@ class InitialViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+//        if user != nil {
+//            performSegue(withIdentifier: <#T##String#>, sender: <#T##Any?#>)
+//        }
         // Do any additional setup after loading the view.
     }
     

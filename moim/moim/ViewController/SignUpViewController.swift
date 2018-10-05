@@ -23,6 +23,11 @@ class SignUpViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // When Editing textfield is finished, Hide Keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+    
     @IBAction func signUpButtonClicked(_ sender: UIButton) {
         guard let email = emailField?.text else { return }
         guard let password = passwordField?.text else { return }

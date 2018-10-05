@@ -125,14 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				12C5B4E7215274EE000A98E3 /* AppDelegate.swift */,
-				12C5B4E9215274EE000A98E3 /* FirstViewController.swift */,
-				12C5B4EB215274EE000A98E3 /* AREventViewController.swift */,
-				12F0330E215CF6D000DC1020 /* LoginViewController.swift */,
-				12C5B4ED215274EE000A98E3 /* Main.storyboard */,
-				12F03310215D151600DC1020 /* SignUpViewController.swift */,
-				12C66FD7215CA536001A5680 /* InitialViewController.swift */,
+				12F03313215D266100DC1020 /* View */,
+				12F03312215D260A00DC1020 /* ViewController */,
 				12C5B4F0215274EF000A98E3 /* Assets.xcassets */,
-				12C5B4F2215274EF000A98E3 /* LaunchScreen.storyboard */,
 				12C5B4F5215274EF000A98E3 /* Info.plist */,
 				12682D062156265000EF6E8A /* GoogleService-Info.plist */,
 			);
@@ -155,6 +150,27 @@
 				12C5B50B215274EF000A98E3 /* Info.plist */,
 			);
 			path = moimUITests;
+			sourceTree = "<group>";
+		};
+		12F03312215D260A00DC1020 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				12C66FD7215CA536001A5680 /* InitialViewController.swift */,
+				12F03310215D151600DC1020 /* SignUpViewController.swift */,
+				12C5B4E9215274EE000A98E3 /* FirstViewController.swift */,
+				12C5B4EB215274EE000A98E3 /* AREventViewController.swift */,
+				12F0330E215CF6D000DC1020 /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		12F03313215D266100DC1020 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				12C5B4ED215274EE000A98E3 /* Main.storyboard */,
+				12C5B4F2215274EF000A98E3 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B32ED9DC1A9E4A75D4CB0428 /* Pods */ = {
