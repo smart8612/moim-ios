@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		01474B6E37A4B1C31F008498 /* Pods_moim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBFFF12334A32E66FA23194A /* Pods_moim.framework */; };
 		12682D072156265000EF6E8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12682D062156265000EF6E8A /* GoogleService-Info.plist */; };
+		12AC7B292168AABF00F595CE /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 12AC7B282168AABF00F595CE /* art.scnassets */; };
 		12C5B4E8215274EE000A98E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5B4E7215274EE000A98E3 /* AppDelegate.swift */; };
 		12C5B4EA215274EE000A98E3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5B4E9215274EE000A98E3 /* FirstViewController.swift */; };
 		12C5B4EC215274EE000A98E3 /* AREventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5B4EB215274EE000A98E3 /* AREventViewController.swift */; };
@@ -45,6 +46,7 @@
 		0EDC3E778F57D2F0791C656F /* Pods-moimUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moimUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-moimUITests/Pods-moimUITests.release.xcconfig"; sourceTree = "<group>"; };
 		10455C818617724429885CC4 /* Pods-moimTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moimTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-moimTests/Pods-moimTests.release.xcconfig"; sourceTree = "<group>"; };
 		12682D062156265000EF6E8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		12AC7B282168AABF00F595CE /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		12C5B4E4215274EE000A98E3 /* moim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12C5B4E7215274EE000A98E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		12C5B4E9215274EE000A98E3 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		12C5B4E6215274EE000A98E3 /* moim */ = {
 			isa = PBXGroup;
 			children = (
+				12AC7B282168AABF00F595CE /* art.scnassets */,
 				12C5B4E7215274EE000A98E3 /* AppDelegate.swift */,
 				12F03313215D266100DC1020 /* View */,
 				12F03312215D260A00DC1020 /* ViewController */,
@@ -306,6 +309,7 @@
 			files = (
 				12C5B4F4215274EF000A98E3 /* LaunchScreen.storyboard in Resources */,
 				12682D072156265000EF6E8A /* GoogleService-Info.plist in Resources */,
+				12AC7B292168AABF00F595CE /* art.scnassets in Resources */,
 				12C5B4F1215274EF000A98E3 /* Assets.xcassets in Resources */,
 				12C5B4EF215274EE000A98E3 /* Main.storyboard in Resources */,
 			);

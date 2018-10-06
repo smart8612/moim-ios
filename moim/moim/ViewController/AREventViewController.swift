@@ -7,27 +7,47 @@
 //
 
 import UIKit
-import Firebase
+import ARKit
+import SceneKit
 
 class AREventViewController: UIViewController {
-
-    @IBOutlet weak var userInformation: UILabel!
     
-    let fireBaseAuth = Auth.auth()
+    @IBOutlet var AREventSceneView: ARSCNView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let user = fireBaseAuth.currentUser
+        // Set the view's delegate
+        AREventSceneView.delegate = self as? ARSCNViewDelegate
         
-        if user != nil {
-            userInformation.text = user?.uid
-        } else {
-            userInformation.text = "do Login"
-        }
+        // Show statistics such as fps and timing information
+        AREventSceneView.showsStatistics = true
+        
+        // Create a new scene
+        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        
+        // Set the scene to the view
+        AREventSceneView.scene = scene
+        
     }
-
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // create a session configuration
+        let configuration = ARWorldTrackingConfiguration()
+        
+        // Run the AREventViewSession
+        AREventSceneView.session.run(configuration)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        // Pause the view's session
+        AREventSceneView.session.pause()
+    }
+    
 }
 

@@ -171,14 +171,14 @@
             <point key="canvasLocation" x="-3719" y="-631"/>
         </scene>
         <!--TimeLine-->
-        <scene sceneID="Ao2-dB-coY">
+        <scene sceneID="lvU-h8-vDO">
             <objects>
-                <viewController id="DtH-6r-Pf4" customClass="FirstViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NaP-2y-0XC">
+                <viewController id="FK7-o8-54D" customClass="FirstViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v3r-7s-OHc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4mE-Xp-tdZ">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R6w-7y-iih">
                                 <rect key="frame" x="0.0" y="44" width="375" height="685"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
@@ -189,81 +189,71 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bit-Kk-Qqw" firstAttribute="bottom" secondItem="4mE-Xp-tdZ" secondAttribute="bottom" id="DYn-nt-5lP"/>
-                            <constraint firstItem="4mE-Xp-tdZ" firstAttribute="top" secondItem="bit-Kk-Qqw" secondAttribute="top" id="bKx-CV-uf1"/>
-                            <constraint firstItem="4mE-Xp-tdZ" firstAttribute="leading" secondItem="bit-Kk-Qqw" secondAttribute="leading" id="kha-Vh-dLd"/>
-                            <constraint firstItem="bit-Kk-Qqw" firstAttribute="trailing" secondItem="4mE-Xp-tdZ" secondAttribute="trailing" id="pRS-0k-3b6"/>
+                            <constraint firstItem="R6w-7y-iih" firstAttribute="leading" secondItem="s2R-aG-DpV" secondAttribute="leading" id="1dD-pM-FaA"/>
+                            <constraint firstItem="R6w-7y-iih" firstAttribute="top" secondItem="s2R-aG-DpV" secondAttribute="top" id="GHe-bC-QSu"/>
+                            <constraint firstItem="s2R-aG-DpV" firstAttribute="trailing" secondItem="R6w-7y-iih" secondAttribute="trailing" id="gKc-7U-kvB"/>
+                            <constraint firstItem="s2R-aG-DpV" firstAttribute="bottom" secondItem="R6w-7y-iih" secondAttribute="bottom" id="uuu-da-4Kp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="bit-Kk-Qqw"/>
+                        <viewLayoutGuide key="safeArea" id="s2R-aG-DpV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="TimeLine" image="first" id="lLq-yl-dHk"/>
-                    <navigationItem key="navigationItem" id="H0M-GB-ZWr"/>
+                    <tabBarItem key="tabBarItem" title="TimeLine" image="first" id="qJF-4I-FXH"/>
+                    <navigationItem key="navigationItem" id="4Xo-aJ-QgU"/>
                     <connections>
-                        <outlet property="webView" destination="4mE-Xp-tdZ" id="5iY-cR-zFg"/>
+                        <outlet property="webView" destination="R6w-7y-iih" id="WMW-Qc-iXg"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fsb-R7-fye" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="op2-r3-vnc" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3991" y="-1159"/>
+            <point key="canvasLocation" x="2607" y="-1159"/>
         </scene>
         <!--AR Event-->
-        <scene sceneID="OcE-zK-rCb">
+        <scene sceneID="vvV-Zn-DKl">
             <objects>
-                <viewController id="7cF-sh-rvI" customClass="AREventViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="p5r-nu-CtW">
+                <viewController id="Jgd-6g-SNl" customClass="AREventViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0h2-fc-wZ4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="4vU-rl-Ztn">
-                                <rect key="frame" x="86.666666666666686" y="384.66666666666669" width="202" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ar-cl-nIj">
-                                <rect key="frame" x="80" y="435.66666666666669" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1cH-uH-bwt">
+                                <rect key="frame" x="0.0" y="44" width="375" height="685"/>
+                            </arscnView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="8Ar-cl-nIj" firstAttribute="centerX" secondItem="4vU-rl-Ztn" secondAttribute="centerX" id="7UY-XK-8Qa"/>
-                            <constraint firstAttribute="centerY" secondItem="4vU-rl-Ztn" secondAttribute="centerY" id="U7j-l1-pBd"/>
-                            <constraint firstItem="8Ar-cl-nIj" firstAttribute="top" secondItem="4vU-rl-Ztn" secondAttribute="bottom" constant="8" symbolic="YES" id="c6n-wH-urJ"/>
-                            <constraint firstAttribute="centerX" secondItem="4vU-rl-Ztn" secondAttribute="centerX" id="fCG-uG-qUf"/>
+                            <constraint firstItem="1cH-uH-bwt" firstAttribute="top" secondItem="fw4-iW-v5L" secondAttribute="top" id="3Ev-VG-ZOg"/>
+                            <constraint firstItem="fw4-iW-v5L" firstAttribute="trailing" secondItem="1cH-uH-bwt" secondAttribute="trailing" id="Avp-hb-iPf"/>
+                            <constraint firstItem="1cH-uH-bwt" firstAttribute="leading" secondItem="fw4-iW-v5L" secondAttribute="leading" id="JOH-cu-PAh"/>
+                            <constraint firstItem="fw4-iW-v5L" firstAttribute="bottom" secondItem="1cH-uH-bwt" secondAttribute="bottom" id="Oj3-ES-9ai"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="mmN-3R-K2W"/>
+                        <viewLayoutGuide key="safeArea" id="fw4-iW-v5L"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="AR Event" image="second" id="qN1-Ep-vz4"/>
+                    <tabBarItem key="tabBarItem" title="AR Event" image="second" id="N9D-OA-SYS"/>
                     <connections>
-                        <outlet property="userInformation" destination="4vU-rl-Ztn" id="WLX-wg-uWt"/>
+                        <outlet property="AREventSceneView" destination="1cH-uH-bwt" id="HrX-Iq-VT3"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xgA-Jl-BCt" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7vg-4x-HcR" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3991" y="-148"/>
+            <point key="canvasLocation" x="2607" y="-98"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="S8e-Uw-M7X">
+        <scene sceneID="6cZ-wd-u5f">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarMain" id="xkE-Qf-pK0" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="HJ5-eK-p9u"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="gAZ-qA-Pvv">
+                <tabBarController storyboardIdentifier="TabBarMain" id="G3s-c6-Vqp" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZhU-MO-Zgs"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="bBV-91-5WW">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="DtH-6r-Pf4" kind="relationship" relationship="viewControllers" id="Or8-Qv-B9x"/>
-                        <segue destination="7cF-sh-rvI" kind="relationship" relationship="viewControllers" id="l4u-xF-saj"/>
+                        <segue destination="FK7-o8-54D" kind="relationship" relationship="viewControllers" id="AQy-xv-ITH"/>
+                        <segue destination="Jgd-6g-SNl" kind="relationship" relationship="viewControllers" id="VoX-ka-r7y"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qd0-Yb-h92" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nTE-i7-WhS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1298" y="-631"/>
+            <point key="canvasLocation" x="828" y="-631"/>
         </scene>
     </scenes>
     <resources>
