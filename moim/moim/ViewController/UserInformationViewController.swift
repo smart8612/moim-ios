@@ -1,32 +1,28 @@
 //
-//  InitialViewController.swift
+//  UserInformationViewController.swift
 //  moim
 //
-//  Created by JeongTaek Han on 27/09/2018.
+//  Created by JeongTaek Han on 07/10/2018.
 //  Copyright © 2018 teammoim. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class InitialViewController: UIViewController {
+class UserInformationViewController: UIViewController {
+
+    @IBOutlet var userEmailLabel: UILabel!
+    @IBOutlet var uidLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let firebaseAuth = Auth.auth()
-        let currentUser = firebaseAuth.currentUser
-        
-        if currentUser != nil {
-            let st = self.storyboard
-            let vc = st?.instantiateViewController(withIdentifier: "TabBarMain") as! UITabBarController
-            
-            self.present(vc, animated: true, completion: nil)
-            
-        }
-        
-
         // Do any additional setup after loading the view.
+        let fireBaseAuth = Auth.auth()
+        let currentUser = fireBaseAuth.currentUser
+        
+        userEmailLabel.text = currentUser?.email
+        uidLabel.text = currentUser?.uid
     }
     
 
