@@ -14,6 +14,8 @@
 		129AEB862169E48A00BEAB6B /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AEB852169E48A00BEAB6B /* Friend.swift */; };
 		12A7151521858F420002F5B7 /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7151421858F420002F5B7 /* NotificationTableViewController.swift */; };
 		12A7151721858FE80002F5B7 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7151621858FE80002F5B7 /* NotificationTableViewCell.swift */; };
+		12A7151A21859B8B0002F5B7 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7151921859B8B0002F5B7 /* FriendTableViewCell.swift */; };
+		12A7151C21859BA00002F5B7 /* FriendTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7151B21859BA00002F5B7 /* FriendTableViewController.swift */; };
 		12AC7B292168AABF00F595CE /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 12AC7B282168AABF00F595CE /* art.scnassets */; };
 		12C5B4E8215274EE000A98E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5B4E7215274EE000A98E3 /* AppDelegate.swift */; };
 		12C5B4EA215274EE000A98E3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5B4E9215274EE000A98E3 /* FirstViewController.swift */; };
@@ -56,6 +58,8 @@
 		129AEB852169E48A00BEAB6B /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		12A7151421858F420002F5B7 /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationTableViewController.swift; path = moim/ViewController/Notification/NotificationTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		12A7151621858FE80002F5B7 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationTableViewCell.swift; path = moim/ViewController/Notification/NotificationTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		12A7151921859B8B0002F5B7 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
+		12A7151B21859BA00002F5B7 /* FriendTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewController.swift; sourceTree = "<group>"; };
 		12AC7B282168AABF00F595CE /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		12C5B4E4215274EE000A98E3 /* moim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12C5B4E7215274EE000A98E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +132,15 @@
 			path = Notification;
 			sourceTree = "<group>";
 		};
+		12A7151D21859C5E0002F5B7 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				12A7151921859B8B0002F5B7 /* FriendTableViewCell.swift */,
+				12A7151B21859BA00002F5B7 /* FriendTableViewController.swift */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
 		12C5B4DB215274EE000A98E3 = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +207,7 @@
 				12F0330E215CF6D000DC1020 /* LoginViewController.swift */,
 				129AEB832169D4F300BEAB6B /* UserInformationViewController.swift */,
 				12C66FD7215CA536001A5680 /* InitialViewController.swift */,
+				12A7151D21859C5E0002F5B7 /* Friend */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -465,6 +479,7 @@
 				12A7151521858F420002F5B7 /* NotificationTableViewController.swift in Sources */,
 				12F03311215D151600DC1020 /* SignUpViewController.swift in Sources */,
 				129AEB842169D4F300BEAB6B /* UserInformationViewController.swift in Sources */,
+				12A7151A21859B8B0002F5B7 /* FriendTableViewCell.swift in Sources */,
 				12C5B4EC215274EE000A98E3 /* AREventViewController.swift in Sources */,
 				12C5B4E8215274EE000A98E3 /* AppDelegate.swift in Sources */,
 				12C5B4EA215274EE000A98E3 /* FirstViewController.swift in Sources */,
@@ -473,6 +488,7 @@
 				12C66FD8215CA536001A5680 /* InitialViewController.swift in Sources */,
 				129AEB862169E48A00BEAB6B /* Friend.swift in Sources */,
 				12A7151721858FE80002F5B7 /* NotificationTableViewCell.swift in Sources */,
+				12A7151C21859BA00002F5B7 /* FriendTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
