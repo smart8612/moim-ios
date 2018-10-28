@@ -16,7 +16,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let url = URL(string: "http://m.naver.com")
+        let url = URL(string: "https://moimweb.herokuapp.com/timeline")
         let request = URLRequest(url: url!)
         webView.load(request)
     }

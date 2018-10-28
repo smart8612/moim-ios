@@ -155,7 +155,7 @@
         <!--Navigation Controller-->
         <scene sceneID="nWs-6f-aLd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lwv-Kt-blN" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginNavigationView" automaticallyAdjustsScrollViewInsets="NO" id="lwv-Kt-blN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cwe-vi-GvM">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
@@ -248,69 +248,32 @@
             <point key="canvasLocation" x="-2351" y="-472"/>
         </scene>
         <!--Moim-->
-        <scene sceneID="lsv-3Q-A4W">
+        <scene sceneID="FwZ-Uo-uLM">
             <objects>
-                <viewController id="7Uq-72-how" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="04d-wl-Ydq">
+                <viewController id="9Y4-Qy-ZyP" customClass="SettingViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2BD-gx-ylZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="bVv-vV-Hjs"/>
+                        <viewLayoutGuide key="safeArea" id="DeT-hs-II2"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Moim" id="fVx-r5-6ey">
-                        <barButtonItem key="leftBarButtonItem" title="User" id="oav-xp-9uh">
+                    <navigationItem key="navigationItem" title="Moim" id="C1Z-PM-A4B">
+                        <barButtonItem key="leftBarButtonItem" title="User" id="XUn-F7-28B">
                             <connections>
-                                <segue destination="p4a-SQ-U6z" kind="show" id="86Z-og-juA"/>
+                                <segue destination="p4a-SQ-U6z" kind="show" id="JGn-nR-YG0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="If2-rj-w8R">
+                            <connections>
+                                <action selector="signOutButtonClicked:" destination="9Y4-Qy-ZyP" id="sr5-9j-Otc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="signOutButton" destination="If2-rj-w8R" id="BfJ-Fj-4a0"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="znS-tK-Xjs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="18" y="-472"/>
-        </scene>
-        <!-- Moim-->
-        <scene sceneID="dQg-iR-pl7">
-            <objects>
-                <viewController id="pEb-fL-5cu" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="P53-p3-Dqp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVf-9G-lrR">
-                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
-                                <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tS3-T3-GsR">
-                                        <rect key="frame" x="48" y="173" width="240" height="128"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </tableView>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="tS3-T3-GsR" secondAttribute="bottom" id="XtV-nq-6Dq"/>
-                                    <constraint firstAttribute="trailing" secondItem="tS3-T3-GsR" secondAttribute="trailing" id="YpN-TI-QjH"/>
-                                    <constraint firstItem="tS3-T3-GsR" firstAttribute="leading" secondItem="JVf-9G-lrR" secondAttribute="leading" id="hVH-Ge-6aI"/>
-                                    <constraint firstItem="tS3-T3-GsR" firstAttribute="top" secondItem="JVf-9G-lrR" secondAttribute="top" id="z5E-6N-4kv"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="TLy-p7-EYS" firstAttribute="trailing" secondItem="JVf-9G-lrR" secondAttribute="trailing" id="7bs-O8-1li"/>
-                            <constraint firstItem="TLy-p7-EYS" firstAttribute="bottom" secondItem="JVf-9G-lrR" secondAttribute="bottom" id="7cE-4p-fi4"/>
-                            <constraint firstItem="JVf-9G-lrR" firstAttribute="leading" secondItem="TLy-p7-EYS" secondAttribute="leading" id="yhs-0O-r2d"/>
-                            <constraint firstItem="JVf-9G-lrR" firstAttribute="top" secondItem="TLy-p7-EYS" secondAttribute="top" id="z5o-NF-v7B"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="TLy-p7-EYS"/>
-                    </view>
-                    <navigationItem key="navigationItem" title=" Moim" id="uWX-jt-bDN">
-                        <barButtonItem key="leftBarButtonItem" title="User" id="TxW-r5-aTW">
-                            <connections>
-                                <segue destination="p4a-SQ-U6z" kind="show" id="xQj-z5-hX4"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="T7H-UV-l1T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pAT-VK-HlB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1097" y="-472"/>
         </scene>
@@ -335,6 +298,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yvC-ki-7qv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1175" y="-472"/>
+        </scene>
+        <!--Moim-->
+        <scene sceneID="tGL-Lb-VCk">
+            <objects>
+                <tableViewController id="muP-dP-7ab" customClass="NotificationTableViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aY2-uz-Abk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NotificationCell" id="Zyt-Ih-Okz" customClass="NotificationTableViewCell" customModule="moim" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zyt-Ih-Okz" id="4Dw-aP-chA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JAX-SW-nYL">
+                                            <rect key="frame" x="16" y="5" width="83" height="33"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJa-u9-gqs">
+                                            <rect key="frame" x="166" y="11" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellImage" destination="JAX-SW-nYL" id="bGx-cJ-zsN"/>
+                                    <outlet property="cellLabel" destination="bJa-u9-gqs" id="OZc-4O-17N"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="muP-dP-7ab" id="Zh0-Lx-PWr"/>
+                            <outlet property="delegate" destination="muP-dP-7ab" id="iP8-Bz-463"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Moim" id="S6q-RL-OfU"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OLi-eC-rA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16.800000000000001" y="-472.16748768472911"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4Fk-8J-mWb">
@@ -487,7 +496,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="7Uq-72-how" kind="relationship" relationship="rootViewController" id="ffC-SO-INd"/>
+                        <segue destination="muP-dP-7ab" kind="relationship" relationship="rootViewController" id="Ych-bv-aFp"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rcQ-NJ-u9e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -506,7 +515,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="pEb-fL-5cu" kind="relationship" relationship="rootViewController" id="bt3-dW-98b"/>
+                        <segue destination="9Y4-Qy-ZyP" kind="relationship" relationship="rootViewController" id="bPz-nV-nPT"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KQg-GV-h5O" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -519,6 +528,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xQj-z5-hX4"/>
+        <segue reference="9im-qW-D9y"/>
     </inferredMetricsTieBreakers>
 </document>

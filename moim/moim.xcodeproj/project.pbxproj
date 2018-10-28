@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		01474B6E37A4B1C31F008498 /* Pods_moim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBFFF12334A32E66FA23194A /* Pods_moim.framework */; };
+		1215FBA321858050006B1B8F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215FBA221858050006B1B8F /* SettingViewController.swift */; };
 		12682D072156265000EF6E8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12682D062156265000EF6E8A /* GoogleService-Info.plist */; };
 		129AEB842169D4F300BEAB6B /* UserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AEB832169D4F300BEAB6B /* UserInformationViewController.swift */; };
+		129AEB862169E48A00BEAB6B /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AEB852169E48A00BEAB6B /* Friend.swift */; };
+		12A7151521858F420002F5B7 /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7151421858F420002F5B7 /* NotificationTableViewController.swift */; };
+		12A7151721858FE80002F5B7 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7151621858FE80002F5B7 /* NotificationTableViewCell.swift */; };
 		12AC7B292168AABF00F595CE /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 12AC7B282168AABF00F595CE /* art.scnassets */; };
 		12C5B4E8215274EE000A98E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5B4E7215274EE000A98E3 /* AppDelegate.swift */; };
 		12C5B4EA215274EE000A98E3 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5B4E9215274EE000A98E3 /* FirstViewController.swift */; };
@@ -46,8 +50,12 @@
 /* Begin PBXFileReference section */
 		0EDC3E778F57D2F0791C656F /* Pods-moimUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moimUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-moimUITests/Pods-moimUITests.release.xcconfig"; sourceTree = "<group>"; };
 		10455C818617724429885CC4 /* Pods-moimTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moimTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-moimTests/Pods-moimTests.release.xcconfig"; sourceTree = "<group>"; };
+		1215FBA221858050006B1B8F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = "/Users/smart8612/Developer/moim-ios/moim/moim/ViewController/SettingViewController.swift"; sourceTree = "<absolute>"; };
 		12682D062156265000EF6E8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		129AEB832169D4F300BEAB6B /* UserInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserInformationViewController.swift; path = moim/ViewController/UserInformationViewController.swift; sourceTree = SOURCE_ROOT; };
+		129AEB852169E48A00BEAB6B /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		12A7151421858F420002F5B7 /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationTableViewController.swift; path = moim/ViewController/Notification/NotificationTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		12A7151621858FE80002F5B7 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationTableViewCell.swift; path = moim/ViewController/Notification/NotificationTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		12AC7B282168AABF00F595CE /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		12C5B4E4215274EE000A98E3 /* moim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12C5B4E7215274EE000A98E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +111,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		129AEB872169E55400BEAB6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				129AEB852169E48A00BEAB6B /* Friend.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		12A71518218595E20002F5B7 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				12A7151421858F420002F5B7 /* NotificationTableViewController.swift */,
+				12A7151621858FE80002F5B7 /* NotificationTableViewCell.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
 		12C5B4DB215274EE000A98E3 = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +160,7 @@
 				12C5B4F0215274EF000A98E3 /* Assets.xcassets */,
 				12C5B4F5215274EF000A98E3 /* Info.plist */,
 				12682D062156265000EF6E8A /* GoogleService-Info.plist */,
+				129AEB872169E55400BEAB6B /* Model */,
 			);
 			path = moim;
 			sourceTree = "<group>";
@@ -160,12 +186,14 @@
 		12F03312215D260A00DC1020 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				12C66FD7215CA536001A5680 /* InitialViewController.swift */,
-				129AEB832169D4F300BEAB6B /* UserInformationViewController.swift */,
+				1215FBA221858050006B1B8F /* SettingViewController.swift */,
+				12A71518218595E20002F5B7 /* Notification */,
 				12F03310215D151600DC1020 /* SignUpViewController.swift */,
 				12C5B4E9215274EE000A98E3 /* FirstViewController.swift */,
 				12C5B4EB215274EE000A98E3 /* AREventViewController.swift */,
 				12F0330E215CF6D000DC1020 /* LoginViewController.swift */,
+				129AEB832169D4F300BEAB6B /* UserInformationViewController.swift */,
+				12C66FD7215CA536001A5680 /* InitialViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -434,13 +462,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12A7151521858F420002F5B7 /* NotificationTableViewController.swift in Sources */,
 				12F03311215D151600DC1020 /* SignUpViewController.swift in Sources */,
 				129AEB842169D4F300BEAB6B /* UserInformationViewController.swift in Sources */,
 				12C5B4EC215274EE000A98E3 /* AREventViewController.swift in Sources */,
 				12C5B4E8215274EE000A98E3 /* AppDelegate.swift in Sources */,
 				12C5B4EA215274EE000A98E3 /* FirstViewController.swift in Sources */,
+				1215FBA321858050006B1B8F /* SettingViewController.swift in Sources */,
 				12F0330F215CF6D000DC1020 /* LoginViewController.swift in Sources */,
 				12C66FD8215CA536001A5680 /* InitialViewController.swift in Sources */,
+				129AEB862169E48A00BEAB6B /* Friend.swift in Sources */,
+				12A7151721858FE80002F5B7 /* NotificationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
