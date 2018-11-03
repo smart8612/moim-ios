@@ -133,6 +133,18 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		12A324B7218D81D50071F365 /* TabBarStoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				127F3121218D7B35006AB029 /* TimelineTab.storyboard */,
+				12A324AE218D7D6A0071F365 /* AREventTab.storyboard */,
+				12A324B0218D7E240071F365 /* FriendsTab.storyboard */,
+				12A324B2218D7EA20071F365 /* NotificationTab.storyboard */,
+				12A324B4218D7EDF0071F365 /* SettingTab.storyboard */,
+			);
+			path = TabBarStoryBoards;
+			sourceTree = "<group>";
+		};
 		12A71518218595E20002F5B7 /* Notification */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,11 +239,7 @@
 			children = (
 				12C5B4ED215274EE000A98E3 /* Main.storyboard */,
 				12C5B4F2215274EF000A98E3 /* LaunchScreen.storyboard */,
-				127F3121218D7B35006AB029 /* TimelineTab.storyboard */,
-				12A324AE218D7D6A0071F365 /* AREventTab.storyboard */,
-				12A324B0218D7E240071F365 /* FriendsTab.storyboard */,
-				12A324B2218D7EA20071F365 /* NotificationTab.storyboard */,
-				12A324B4218D7EDF0071F365 /* SettingTab.storyboard */,
+				12A324B7218D81D50071F365 /* TabBarStoryBoards */,
 			);
 			path = View;
 			sourceTree = "<group>";
