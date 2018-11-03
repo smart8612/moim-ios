@@ -10,8 +10,13 @@
 		01474B6E37A4B1C31F008498 /* Pods_moim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBFFF12334A32E66FA23194A /* Pods_moim.framework */; };
 		1215FBA321858050006B1B8F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215FBA221858050006B1B8F /* SettingViewController.swift */; };
 		12682D072156265000EF6E8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12682D062156265000EF6E8A /* GoogleService-Info.plist */; };
+		127F3122218D7B35006AB029 /* TimelineTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127F3121218D7B35006AB029 /* TimelineTab.storyboard */; };
 		129AEB842169D4F300BEAB6B /* UserInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AEB832169D4F300BEAB6B /* UserInformationViewController.swift */; };
 		129AEB862169E48A00BEAB6B /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129AEB852169E48A00BEAB6B /* Friend.swift */; };
+		12A324AF218D7D6A0071F365 /* AREventTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A324AE218D7D6A0071F365 /* AREventTab.storyboard */; };
+		12A324B1218D7E240071F365 /* FriendsTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A324B0218D7E240071F365 /* FriendsTab.storyboard */; };
+		12A324B3218D7EA20071F365 /* NotificationTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A324B2218D7EA20071F365 /* NotificationTab.storyboard */; };
+		12A324B5218D7EDF0071F365 /* SettingTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12A324B4218D7EDF0071F365 /* SettingTab.storyboard */; };
 		12A7151521858F420002F5B7 /* NotificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7151421858F420002F5B7 /* NotificationTableViewController.swift */; };
 		12A7151721858FE80002F5B7 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7151621858FE80002F5B7 /* NotificationTableViewCell.swift */; };
 		12A7151A21859B8B0002F5B7 /* FriendTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A7151921859B8B0002F5B7 /* FriendTableViewCell.swift */; };
@@ -54,8 +59,13 @@
 		10455C818617724429885CC4 /* Pods-moimTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moimTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-moimTests/Pods-moimTests.release.xcconfig"; sourceTree = "<group>"; };
 		1215FBA221858050006B1B8F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = "/Users/smart8612/Developer/moim-ios/moim/moim/ViewController/SettingViewController.swift"; sourceTree = "<absolute>"; };
 		12682D062156265000EF6E8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		127F3121218D7B35006AB029 /* TimelineTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimelineTab.storyboard; sourceTree = "<group>"; };
 		129AEB832169D4F300BEAB6B /* UserInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserInformationViewController.swift; path = moim/ViewController/UserInformationViewController.swift; sourceTree = SOURCE_ROOT; };
 		129AEB852169E48A00BEAB6B /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		12A324AE218D7D6A0071F365 /* AREventTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AREventTab.storyboard; sourceTree = "<group>"; };
+		12A324B0218D7E240071F365 /* FriendsTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendsTab.storyboard; sourceTree = "<group>"; };
+		12A324B2218D7EA20071F365 /* NotificationTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NotificationTab.storyboard; sourceTree = "<group>"; };
+		12A324B4218D7EDF0071F365 /* SettingTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingTab.storyboard; sourceTree = "<group>"; };
 		12A7151421858F420002F5B7 /* NotificationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationTableViewController.swift; path = moim/ViewController/Notification/NotificationTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		12A7151621858FE80002F5B7 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NotificationTableViewCell.swift; path = moim/ViewController/Notification/NotificationTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		12A7151921859B8B0002F5B7 /* FriendTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTableViewCell.swift; sourceTree = "<group>"; };
@@ -217,6 +227,11 @@
 			children = (
 				12C5B4ED215274EE000A98E3 /* Main.storyboard */,
 				12C5B4F2215274EF000A98E3 /* LaunchScreen.storyboard */,
+				127F3121218D7B35006AB029 /* TimelineTab.storyboard */,
+				12A324AE218D7D6A0071F365 /* AREventTab.storyboard */,
+				12A324B0218D7E240071F365 /* FriendsTab.storyboard */,
+				12A324B2218D7EA20071F365 /* NotificationTab.storyboard */,
+				12A324B4218D7EDF0071F365 /* SettingTab.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -352,10 +367,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12A324B3218D7EA20071F365 /* NotificationTab.storyboard in Resources */,
 				12C5B4F4215274EF000A98E3 /* LaunchScreen.storyboard in Resources */,
 				12682D072156265000EF6E8A /* GoogleService-Info.plist in Resources */,
 				12AC7B292168AABF00F595CE /* art.scnassets in Resources */,
+				127F3122218D7B35006AB029 /* TimelineTab.storyboard in Resources */,
+				12A324B5218D7EDF0071F365 /* SettingTab.storyboard in Resources */,
+				12A324AF218D7D6A0071F365 /* AREventTab.storyboard in Resources */,
 				12C5B4F1215274EF000A98E3 /* Assets.xcassets in Resources */,
+				12A324B1218D7E240071F365 /* FriendsTab.storyboard in Resources */,
 				12C5B4EF215274EE000A98E3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
