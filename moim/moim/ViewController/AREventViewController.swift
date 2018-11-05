@@ -7,28 +7,31 @@
 //
 
 import UIKit
-import ARKit
-import SceneKit
+//import ARKit
+//import SceneKit
+import ARCL
+import CoreLocation
 
 class AREventViewController: UIViewController {
     
-    @IBOutlet var AREventSceneView: ARSCNView!
+    var sceneLocationView = SceneLocationView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
         // Set the view's delegate
-        AREventSceneView.delegate = self as? ARSCNViewDelegate
+//        AREventSceneView.delegate = self as? ARSCNViewDelegate
         
         // Show statistics such as fps and timing information
-        AREventSceneView.showsStatistics = true
+//        AREventSceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+//        let scene = SCNScene(named: "art.scnassets/ship.scn")!
         
         // Set the scene to the view
-        AREventSceneView.scene = scene
+//        AREventSceneView.scene = scene
         
     }
     
@@ -36,17 +39,35 @@ class AREventViewController: UIViewController {
         super.viewWillAppear(animated)
         
         // create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
+//        let configuration = ARWorldTrackingConfiguration()
         
         // Run the AREventViewSession
-        AREventSceneView.session.run(configuration)
+//        AREventSceneView.session.run(configuration)
+        
+        sceneLocationView.run()
+        view.addSubview(sceneLocationView)
+        
+        let coordinate = CLLocationCoordinate2D(latitude: 37.5513, longitude: 126.9889)
+        let location = CLLocation(coordinate: coordinate, altitude: 25)
+        let image = UIImage(named: "like")!
+        let annotationNode = LocationAnnotationNode(location: location, image: image)
+        
+        sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+        
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        sceneLocationView.frame = view.bounds
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
         // Pause the view's session
-        AREventSceneView.session.pause()
+//        AREventSceneView.session.pause()
+        sceneLocationView.pause()
     }
     
 }

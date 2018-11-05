@@ -9,6 +9,7 @@ target 'moim' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
+  pod 'ARCL'
   
   # Pods for moim
 

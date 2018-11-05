@@ -16,18 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="wNG-23-MWm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xWG-L2-jrI">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                            </arscnView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="xWG-L2-jrI" firstAttribute="leading" secondItem="HFY-nf-5zU" secondAttribute="leading" id="KZa-mT-5fU"/>
-                            <constraint firstItem="HFY-nf-5zU" firstAttribute="trailing" secondItem="xWG-L2-jrI" secondAttribute="trailing" id="YeJ-At-rRb"/>
-                            <constraint firstItem="HFY-nf-5zU" firstAttribute="bottom" secondItem="xWG-L2-jrI" secondAttribute="bottom" id="iZN-X6-KeC"/>
-                            <constraint firstItem="xWG-L2-jrI" firstAttribute="top" secondItem="HFY-nf-5zU" secondAttribute="top" id="uRu-Nd-R4a"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HFY-nf-5zU"/>
                     </view>
                     <navigationItem key="navigationItem" title="Moim" id="qkz-OC-iVH">
@@ -42,9 +31,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="AREventSceneView" destination="xWG-L2-jrI" id="jl2-mT-p6q"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1Z-zK-Oom" sceneMemberID="firstResponder"/>
             </objects>

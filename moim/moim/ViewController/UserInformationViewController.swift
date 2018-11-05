@@ -11,8 +11,13 @@ import Firebase
 
 class UserInformationViewController: UIViewController {
 
-    @IBOutlet var userEmailLabel: UILabel!
-    @IBOutlet var uidLabel: UILabel!
+    
+    @IBOutlet var emailLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var birthdayLabel: UILabel!
+    @IBOutlet var phoneLabel: UILabel!
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +26,21 @@ class UserInformationViewController: UIViewController {
         let fireBaseAuth = Auth.auth()
         let currentUser = fireBaseAuth.currentUser
         
-        userEmailLabel.text = currentUser?.email
-        uidLabel.text = currentUser?.uid
+        ref = Database.database().reference()
+        self.ref.child("users").child(currentUser!.uid).child("userInformation").observeSingleEvent(of: .value, with: { (snapshot) in
+            // Get user value
+            let value = snapshot.value as? NSDictionary
+            
+            self.emailLabel.text = currentUser?.email
+            self.nameLabel.text = value?["name"] as? String ?? ""
+            self.birthdayLabel.text = value?["birthday"] as? String ?? ""
+            self.phoneLabel.text = value?["phone"] as? String ?? ""
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
     }
     
 
