@@ -101,7 +101,7 @@
         <!--Initial View Controller-->
         <scene sceneID="q48-fG-0fv">
             <objects>
-                <viewController id="Vul-nI-ibw" customClass="InitialViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialViewController" id="Vul-nI-ibw" customClass="InitialViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9SU-sg-fgr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

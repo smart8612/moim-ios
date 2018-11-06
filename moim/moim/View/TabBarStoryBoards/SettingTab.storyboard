@@ -23,13 +23,10 @@
                         <barButtonItem key="leftBarButtonItem" title="User" id="VPT-cm-ATy"/>
                         <barButtonItem key="rightBarButtonItem" title="Sign Out" id="y1o-R8-gnT">
                             <connections>
-                                <action selector="signOutButtonClicked:" destination="BWd-kx-1Lh" id="U4u-5v-rJg"/>
+                                <action selector="signOutButtonClicked:" destination="BWd-kx-1Lh" id="YY7-ed-VHC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="signOutButton" destination="y1o-R8-gnT" id="jql-nQ-9t8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7a0-FN-Cla" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
