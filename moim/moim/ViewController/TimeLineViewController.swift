@@ -26,6 +26,10 @@ class TimeLineViewController: UIViewController {
     }
     
 
+    @IBAction func closeButtonClicked(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func sendButtonClicked(_ sender: UIButton) {
         ref = Database.database().reference()
         var user = Auth.auth().currentUser!
