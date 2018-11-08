@@ -58,7 +58,7 @@
 		1215FBA221858050006B1B8F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = "/Users/smart8612/Developer/moim-ios/moim/moim/ViewController/SettingViewController.swift"; sourceTree = "<absolute>"; };
 		12682D062156265000EF6E8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		127F3121218D7B35006AB029 /* TimelineTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimelineTab.storyboard; sourceTree = "<group>"; };
-		129AEB832169D4F300BEAB6B /* UserInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserInformationViewController.swift; path = moim/ViewController/UserInformationViewController.swift; sourceTree = SOURCE_ROOT; };
+		129AEB832169D4F300BEAB6B /* UserInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserInformationViewController.swift; path = moim/ViewController/TabBarVC/UserInformationViewController.swift; sourceTree = SOURCE_ROOT; };
 		129AEB852169E48A00BEAB6B /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		12A324AE218D7D6A0071F365 /* AREventTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AREventTab.storyboard; sourceTree = "<group>"; };
 		12A324B0218D7E240071F365 /* FriendsTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendsTab.storyboard; sourceTree = "<group>"; };
@@ -136,6 +136,27 @@
 				368904953AA1DC661338740C /* Pods-moimUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		12816F4E21947B9700DD3212 /* TabBarVC */ = {
+			isa = PBXGroup;
+			children = (
+				129AEB832169D4F300BEAB6B /* UserInformationViewController.swift */,
+				1215FBA221858050006B1B8F /* SettingViewController.swift */,
+				12C5B4E9215274EE000A98E3 /* TimeLineViewController.swift */,
+				12C5B4EB215274EE000A98E3 /* AREventViewController.swift */,
+			);
+			path = TabBarVC;
+			sourceTree = "<group>";
+		};
+		12816F4F21947BB300DD3212 /* UserSignVC */ = {
+			isa = PBXGroup;
+			children = (
+				12F03310215D151600DC1020 /* SignUpViewController.swift */,
+				12F0330E215CF6D000DC1020 /* LoginViewController.swift */,
+				12C66FD7215CA536001A5680 /* InitialViewController.swift */,
+			);
+			path = UserSignVC;
 			sourceTree = "<group>";
 		};
 		129AEB872169E55400BEAB6B /* Model */ = {
@@ -234,14 +255,9 @@
 		12F03312215D260A00DC1020 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1215FBA221858050006B1B8F /* SettingViewController.swift */,
 				12A71518218595E20002F5B7 /* Notification */,
-				12F03310215D151600DC1020 /* SignUpViewController.swift */,
-				12C5B4E9215274EE000A98E3 /* TimeLineViewController.swift */,
-				12C5B4EB215274EE000A98E3 /* AREventViewController.swift */,
-				12F0330E215CF6D000DC1020 /* LoginViewController.swift */,
-				129AEB832169D4F300BEAB6B /* UserInformationViewController.swift */,
-				12C66FD7215CA536001A5680 /* InitialViewController.swift */,
+				12816F4E21947B9700DD3212 /* TabBarVC */,
+				12816F4F21947BB300DD3212 /* UserSignVC */,
 				12A7151D21859C5E0002F5B7 /* Friend */,
 			);
 			path = ViewController;
