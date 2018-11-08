@@ -17,13 +17,13 @@ class InitialViewController: UIViewController {
         let firebaseAuth = Auth.auth()
         let currentUser = firebaseAuth.currentUser
         
-        if currentUser != nil {
-            let st = self.storyboard
-            let vc = st?.instantiateViewController(withIdentifier: "TabBarMain") as! UITabBarController
-            
-            self.present(vc, animated: true, completion: nil)
-            
-        }
+//        if currentUser != nil {
+//            let st = self.storyboard
+//            let vc = st?.instantiateViewController(withIdentifier: "TabBarMain") as! UITabBarController
+//            
+//            self.present(vc, animated: true, completion: nil)
+//            
+//        }
         
 
         // Do any additional setup after loading the view.

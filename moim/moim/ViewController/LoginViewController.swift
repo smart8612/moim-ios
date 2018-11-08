@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
         guard let password = passwordField?.text else { return }
         
         let st = self.storyboard
-        let vc = st?.instantiateViewController(withIdentifier: "TabBarMain") as! UITabBarController
+        let vc = st?.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
         
         if password.count >= 8 {
             fireBaseAuth.signIn(withEmail: email, password: password) { user, error in

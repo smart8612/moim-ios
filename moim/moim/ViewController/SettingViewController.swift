@@ -25,12 +25,12 @@ class SettingViewController: UIViewController {
 //        let st = self.storyboard
 //        let vc = st?.instantiateViewController(withIdentifier: "loginNavigationView") as! UIViewController
         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "InitialViewController") 
+        let vc = storyBoard.instantiateViewController(withIdentifier: "loginNavigationView") 
         
         do {
             try fireBaseAuth.signOut()
-            dismiss(animated: true, completion: nil)
-            present(vc, animated: true, completion: nil)
+            self.present(vc, animated: true, completion: nil)
+                
         } catch let signOutError as NSError {
             print ("Error signing out: \(signOutError.localizedDescription)")
         }
