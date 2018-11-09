@@ -12,7 +12,6 @@
 		12073E6A219481EA0079453F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12073E69219481EA0079453F /* Post.swift */; };
 		12073E6C219481EF0079453F /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12073E6B219481EF0079453F /* UserProfile.swift */; };
 		12073E6F219484590079453F /* TimeLineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12073E6E219484590079453F /* TimeLineTableViewController.swift */; };
-		12073E71219488900079453F /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12073E70219488900079453F /* UserService.swift */; };
 		1215FBA321858050006B1B8F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215FBA221858050006B1B8F /* SettingViewController.swift */; };
 		12682D072156265000EF6E8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12682D062156265000EF6E8A /* GoogleService-Info.plist */; };
 		127F3122218D7B35006AB029 /* TimelineTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127F3121218D7B35006AB029 /* TimelineTab.storyboard */; };
@@ -65,7 +64,6 @@
 		12073E69219481EA0079453F /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		12073E6B219481EF0079453F /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		12073E6E219484590079453F /* TimeLineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewController.swift; sourceTree = "<group>"; };
-		12073E70219488900079453F /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		1215FBA221858050006B1B8F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = "/Users/smart8612/Developer/moim-ios/moim/moim/ViewController/SettingViewController.swift"; sourceTree = "<absolute>"; };
 		12682D062156265000EF6E8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		127F3121218D7B35006AB029 /* TimelineTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimelineTab.storyboard; sourceTree = "<group>"; };
@@ -163,7 +161,6 @@
 			children = (
 				12073E69219481EA0079453F /* Post.swift */,
 				12073E6B219481EF0079453F /* UserProfile.swift */,
-				12073E70219488900079453F /* UserService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -546,7 +543,6 @@
 				129AEB842169D4F300BEAB6B /* UserInformationViewController.swift in Sources */,
 				12A7151A21859B8B0002F5B7 /* FriendTableViewCell.swift in Sources */,
 				12C5B4EC215274EE000A98E3 /* AREventViewController.swift in Sources */,
-				12073E71219488900079453F /* UserService.swift in Sources */,
 				12073E6A219481EA0079453F /* Post.swift in Sources */,
 				12C5B4E8215274EE000A98E3 /* AppDelegate.swift in Sources */,
 				12C5B4EA215274EE000A98E3 /* TimeLineViewController.swift in Sources */,

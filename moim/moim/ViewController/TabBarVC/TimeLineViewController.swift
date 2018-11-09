@@ -13,6 +13,7 @@ class TimeLineViewController: UIViewController {
     
     @IBOutlet var textField: UITextField!
     var ref: DatabaseReference!
+    var post: Dictionary<String,String>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,29 +28,37 @@ class TimeLineViewController: UIViewController {
     
     @IBAction func sendButtonClicked(_ sender: UIButton) {
         ref = Database.database().reference()
-        var fireBaseAuth = Auth.auth()
-        var postRef = self.ref.child("timeline").childByAutoId()
+        let fireBaseAuth = Auth.auth()
+        let postRef = self.ref.child("timeline/\(Date().millisecondsSince1970)")
         
-//        let postObject = [
-//            "": [
-//                "uid": UserProfile.uid,
-//                "username": UserProfile.username,
-//                "photoURL": UserProfile.photoURL.absoluteString
-//            ],
-//            "text": textField.text,
-//            "timestamp": [".sv":"timestamp"]
-//            ] as [String : Dictionary]
-////
-//        postRef.setValue(postObject, withCompletionBlock: { error, ref in
-//            if error == nil {
-//                self.dismiss(animated: true, completion: nil)
-//            } else {
-//                // Handle the error
-//            }
-//        })
+        if let name: String = fireBaseAuth.currentUser?.email,
+            let text: String = textField.text {
+            self.post = [
+                "name": name,
+                "text": text
+            ]
+        }
+        
+        postRef.setValue(post, withCompletionBlock: { error, ref in
+            if error == nil {
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                // Handle the error
+            }
+        })
         
         
     }
     
+}
+
+extension Date {
+    var millisecondsSince1970:Int {
+        return Int((self.timeIntervalSince1970 * 1000.0).rounded())
+    }
+    
+    init(milliseconds:Int) {
+        self = Date(timeIntervalSince1970: TimeInterval(milliseconds) / 1000)
+    }
 }
 

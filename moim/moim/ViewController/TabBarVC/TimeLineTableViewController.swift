@@ -33,6 +33,14 @@ class TimeLineTableViewController: UITableViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+        observePosts()
+        
+    }
+    
 
     // MARK: - Table view data source
     
