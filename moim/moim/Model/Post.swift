@@ -1,5 +1,5 @@
 //
-//  Friend.swift
+//  Post.swift
 //  moim
 //
 //  Created by JeongTaek Han on 07/10/2018.
@@ -8,13 +8,13 @@
 
 import Foundation
 
-class Friend {
-    var symbole: String
+
+class Post {
     var name: String
+    var text: String
     
-    init(symbole: String, name: String) {
-        self.symbole = symbole
-        self.name = name
-        
+    init(author: String, text: String) {
+        self.name = author
+        self.text = text
     }
 }
