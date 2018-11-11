@@ -12,7 +12,7 @@ AR based Social Network Service Platform for Analog Meeting
 
 - Augmented Reality: Apple Arkit2
 - Programming Language: Swift 4.2
-- Optimesed iOS Version: 12.1
+- Optimised iOS Version: 12.1
 - Back-end: Google Firebase
 
 
