@@ -57,15 +57,12 @@ class TimeLineTableViewController: UITableViewController {
                     let author = dict["name"] as? String,
                     let text = dict["text"] as? String {
                     
-                    print(123)
-                    
                     let post = Post(author: author, text: text)
-                    
                     postList.append(post)
                 }
             }
             
-            self.posts = postList
+            self.posts = postList.reversed()
             self.tableView.reloadData()
             
         })
@@ -87,7 +84,6 @@ class TimeLineTableViewController: UITableViewController {
 
         // Configure the cell...
         let row = indexPath.row
-        
         cell.set(post: self.posts[row])
 
         return cell

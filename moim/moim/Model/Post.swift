@@ -17,4 +17,11 @@ class Post {
         self.name = author
         self.text = text
     }
+    
+    func getPostDataDictionary() -> Dictionary<String, String> {
+        return [
+            "name": self.name,
+            "text": self.text
+        ]
+    }
 }

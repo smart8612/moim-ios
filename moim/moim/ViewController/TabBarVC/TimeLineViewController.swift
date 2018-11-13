@@ -33,10 +33,9 @@ class TimeLineViewController: UIViewController {
         
         if let name: String = fireBaseAuth.currentUser?.email,
             let text: String = textField.text {
-            self.post = [
-                "name": name,
-                "text": text
-            ]
+            let tmpPost = Post(author: name, text: text)
+            self.post = tmpPost.getPostDataDictionary()
+            
         }
         
         postRef.setValue(post, withCompletionBlock: { error, ref in

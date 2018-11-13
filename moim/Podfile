@@ -10,6 +10,7 @@ target 'moim' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'ARCL'
+  pod 'SwifterSwift'
   
   # Pods for moim
 
