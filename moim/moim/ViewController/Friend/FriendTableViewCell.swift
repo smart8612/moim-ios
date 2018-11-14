@@ -11,11 +11,8 @@ import UIKit
 class FriendTableViewCell: UITableViewCell {
     
     @IBOutlet var friendProfileImage: UIImageView!
-    
     @IBOutlet var friendNameLabel: UILabel!
-    
     @IBOutlet var friendStatusLabel: UILabel!
-    
     @IBOutlet var friendAddButton: UIButton!
     
     override func awakeFromNib() {

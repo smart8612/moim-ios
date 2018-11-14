@@ -10,8 +10,8 @@
 		12073E66219481860079453F /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12073E65219481860079453F /* PostTableViewCell.xib */; };
 		12073E68219481970079453F /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12073E67219481970079453F /* PostTableViewCell.swift */; };
 		12073E6A219481EA0079453F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12073E69219481EA0079453F /* Post.swift */; };
-		12073E6C219481EF0079453F /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12073E6B219481EF0079453F /* UserProfile.swift */; };
 		12073E6F219484590079453F /* TimeLineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12073E6E219484590079453F /* TimeLineTableViewController.swift */; };
+		120E403C219A69F8005BBF4D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E403B219A69F8005BBF4D /* User.swift */; };
 		1215FBA321858050006B1B8F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215FBA221858050006B1B8F /* SettingViewController.swift */; };
 		12682D072156265000EF6E8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12682D062156265000EF6E8A /* GoogleService-Info.plist */; };
 		127F3122218D7B35006AB029 /* TimelineTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127F3121218D7B35006AB029 /* TimelineTab.storyboard */; };
@@ -62,8 +62,8 @@
 		12073E65219481860079453F /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		12073E67219481970079453F /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		12073E69219481EA0079453F /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		12073E6B219481EF0079453F /* UserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		12073E6E219484590079453F /* TimeLineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewController.swift; sourceTree = "<group>"; };
+		120E403B219A69F8005BBF4D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1215FBA221858050006B1B8F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = "/Users/smart8612/Developer/moim-ios/moim/moim/ViewController/SettingViewController.swift"; sourceTree = "<absolute>"; };
 		12682D062156265000EF6E8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		127F3121218D7B35006AB029 /* TimelineTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimelineTab.storyboard; sourceTree = "<group>"; };
@@ -160,7 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				12073E69219481EA0079453F /* Post.swift */,
-				12073E6B219481EF0079453F /* UserProfile.swift */,
+				120E403B219A69F8005BBF4D /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -541,7 +541,6 @@
 			files = (
 				12A7151521858F420002F5B7 /* NotificationTableViewController.swift in Sources */,
 				12F03311215D151600DC1020 /* SignUpViewController.swift in Sources */,
-				12073E6C219481EF0079453F /* UserProfile.swift in Sources */,
 				129AEB842169D4F300BEAB6B /* UserInformationViewController.swift in Sources */,
 				12A7151A21859B8B0002F5B7 /* FriendTableViewCell.swift in Sources */,
 				12C5B4EC215274EE000A98E3 /* AREventViewController.swift in Sources */,
@@ -552,6 +551,7 @@
 				1215FBA321858050006B1B8F /* SettingViewController.swift in Sources */,
 				12F0330F215CF6D000DC1020 /* LoginViewController.swift in Sources */,
 				12C66FD8215CA536001A5680 /* InitialViewController.swift in Sources */,
+				120E403C219A69F8005BBF4D /* User.swift in Sources */,
 				12A7151721858FE80002F5B7 /* NotificationTableViewCell.swift in Sources */,
 				12073E6F219484590079453F /* TimeLineTableViewController.swift in Sources */,
 				12A7151C21859BA00002F5B7 /* FriendTableViewController.swift in Sources */,

@@ -9,7 +9,7 @@
 import Foundation
 
 
-class UserProfile {
+class User {
     var uid: String
     var email: String
     var name: String
@@ -19,6 +19,14 @@ class UserProfile {
         self.email = email
         self.name = username
         
+    }
+    
+    func getUserDataDictionary() -> Dictionary<String, String> {
+        return [
+            "uid": self.uid,
+            "email": self.email,
+            "name": self.name
+        ]
     }
 }
 

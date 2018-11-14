@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class FriendTableViewController: UITableViewController {
     
-    var friendImage = [String]()
-    var friendName = [String]()
-    var friendStatusMessage = [String]()
+    var userList = [String]()
+    var userObjArray = [User]()
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +24,58 @@ class FriendTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        friendImage = ["like.jpg", "123.jpg", "345.jpg"]
-        friendName = ["한정택", "신민욱", "최호경", "안희운", "안중민", "최주원"]
-        friendStatusMessage = ["SSibal", "123", "345"]
+        observeUsers()
+        observeUserInformation()
         
-        tableView.rowHeight = 300
+        tableView.rowHeight = 200
+        tableView.reloadData()
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        observeUsers()
+        observeUserInformation()
+        
+        tableView.reloadData()
+    }
+    
+    func observeUsers() {
+        let usersRef = Database.database().reference().child("userList")
+        
+        usersRef.observe(.value, with: { snapshot in
+            var userList = [String]()
+            for child in snapshot.children {
+                if let childSnapshot = child as? DataSnapshot {
+                    let uid = childSnapshot.key
+                    userList.append(uid)
+                }
+            }
+            self.userList = userList
+            self.tableView.reloadData()
+        })
+    }
+    
+    func observeUserInformation() {
+        let usersRef = Database.database().reference()
+        
+        usersRef.observe(.value, with: { snapshot in
+            for child in snapshot.children {
+                if let childSnapshot = child as? DataSnapshot,
+                    let dic = childSnapshot.value as? Dictionary<String, String>,
+                    let uid = dic["uid"],
+                    let name = dic["name"],
+                    let email = dic["email"] {
+                    let tmpUser = User(uid: uid, email: email, username: name)
+                    self.userObjArray.append(tmpUser)
+                }
+            }
+            self.tableView.reloadData()
+        })
+        
+    }
+
 
     // MARK: - Table view data source
 
@@ -40,7 +86,7 @@ class FriendTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return friendName.count
+        return self.userObjArray.count
     }
 
     
@@ -48,9 +94,11 @@ class FriendTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendTableCell", for: indexPath) as! FriendTableViewCell
         
         let row = indexPath.row
-        cell.friendNameLabel.text = friendName[row]
-        cell.friendProfileImage.image = UIImage(named: friendImage[0])
-        cell.friendStatusLabel.text = friendStatusMessage[0]
+        
+        
+        cell.friendNameLabel.text = userObjArray[row].name
+//        cell.friendProfileImage.image = UIImage(named: friendImage[0])
+        cell.friendStatusLabel.text = userObjArray[row].email
 
         // Configure the cell...
 
