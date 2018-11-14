@@ -24,21 +24,29 @@ class FriendTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        observeUsers()
-        observeUserInformation()
+        clearUserData()
         
         tableView.rowHeight = 200
         tableView.reloadData()
-        
+  
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        clearUserData()
+        
+        tableView.reloadData()
+        
         observeUsers()
         observeUserInformation()
         
-        tableView.reloadData()
+    }
+    
+    func clearUserData() {
+        self.userList.removeAll()
+        self.userObjArray.removeAll()
+        
     }
     
     func observeUsers() {
@@ -53,7 +61,7 @@ class FriendTableViewController: UITableViewController {
                 }
             }
             self.userList = userList
-            self.tableView.reloadData()
+            print(userList)
         })
     }
     
@@ -71,6 +79,7 @@ class FriendTableViewController: UITableViewController {
                     self.userObjArray.append(tmpUser)
                 }
             }
+            print(self.userObjArray)
             self.tableView.reloadData()
         })
         
