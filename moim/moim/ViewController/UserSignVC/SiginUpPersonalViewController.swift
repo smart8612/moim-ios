@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import Firebase
 
 class SiginUpPersonalViewController: UIViewController {
     
     var data: Dictionary<String, String?> = [:]
-
+    
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var genderField: UITextField!
+    @IBOutlet weak var nicknameField: UITextField!
+    @IBOutlet weak var phoneNumberField: UITextField!
+    @IBOutlet weak var birthdayDatePicker: UIDatePicker!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,7 +26,39 @@ class SiginUpPersonalViewController: UIViewController {
         print(self.data)
     }
     
-
+    @IBAction func unwindToRoot(unwindSegue: UIStoryboardSegue) {
+        initialUserDB()
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
+    private func initialUserDB() {
+        let user = initialUserObject()
+        let userRef = Database.database().reference().child("users/\(user.uid)")
+        userRef.setValue(user.getUserDataDictionary())
+    }
+    
+    private func initialUserObject() -> User {
+        let currentUser = Auth.auth().currentUser
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        
+        let uid = currentUser?.uid
+        let email = currentUser?.email
+        let name = nameField.text
+        let gender = genderField.text
+        let nickname = nicknameField.text
+        let phoneNumber = phoneNumberField.text
+        let birthday = dateFormatter.string(from: birthdayDatePicker.date)
+        
+        let user = User(
+            uid: uid!, email: email!, userName: name!,
+            nickName: nickname!, gender: gender!,
+            birthDay: birthday, phoneNumber: phoneNumber!
+        )
+        
+        return user
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -19,17 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         
-        let authListener = Auth.auth().addStateDidChangeListener { auth, user in
-            
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            if user != nil {
-                //
-                let controller = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
-                self.window?.rootViewController = controller
-                
-            }
-        }
+//        let authListener = Auth.auth().addStateDidChangeListener { auth, user in
+//
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//
+//            if user != nil {
+//                //
+//                let controller = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+//                self.window?.rootViewController = controller
+//
+//            }
+//        }
         
         return true
     }

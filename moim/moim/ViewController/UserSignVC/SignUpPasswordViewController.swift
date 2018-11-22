@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpPasswordViewController: UIViewController {
     
@@ -21,8 +22,20 @@ class SignUpPasswordViewController: UIViewController {
         print(self.data)
     }
     
-    @IBAction func sendPassword(_ sender: UIButton) {
-        performSegue(withIdentifier: "showPersonalSegue", sender: self)
+    @IBAction func signUpButtonClicked(_ sender: UIButton) {
+        
+        guard let email = data["email"] else { return }
+        guard let password = passwordField?.text else { return }
+        let fireBaseAuth = Auth.auth()
+        
+        fireBaseAuth.createUser(withEmail: email!, password: password) { user, error in
+            if error == nil && user != nil {
+                print("user created")
+                self.performSegue(withIdentifier: "showPersonalSegue", sender: self)
+            } else {
+                print("Error Creating User: \(String(describing: error?.localizedDescription))")
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -31,7 +44,6 @@ class SignUpPasswordViewController: UIViewController {
             let personalVC = segue.destination as! SiginUpPersonalViewController
             
             self.data["Password"] = self.passwordField.text
-            
             personalVC.data = self.data
             
         }
