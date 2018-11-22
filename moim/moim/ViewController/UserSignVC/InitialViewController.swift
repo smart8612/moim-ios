@@ -21,15 +21,14 @@ class InitialViewController: UIViewController {
     }
     
     func userSessionObserver() {
-        let authListener = Auth.auth().addStateDidChangeListener { auth, user in
+        let FireBaseAuth = Auth.auth()
+        
+        if FireBaseAuth.currentUser != nil {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-
-            if user != nil {
-                //
-                let controller = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
-                self.window?.rootViewController = controller
-                self.present(controller, animated: false, completion: nil)
-            }
+            let controller = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+            
+            self.window?.rootViewController = controller
+            self.present(controller, animated: false, completion: nil)
         }
     }
     

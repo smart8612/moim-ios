@@ -32,6 +32,12 @@ class SignUpEmailViewController: UIViewController {
         }
     }
     
+    // When Editing textfield is finished, Hide Keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+        
+    }
+    
     /*
     // MARK: - Navigation
 

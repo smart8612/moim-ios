@@ -27,14 +27,14 @@ class UserInformationViewController: UIViewController {
         let currentUser = fireBaseAuth.currentUser
         
         ref = Database.database().reference()
-        self.ref.child("users").child(currentUser!.uid).child("userInformation").observeSingleEvent(of: .value, with: { (snapshot) in
+        self.ref.child("users").child(currentUser!.uid).observeSingleEvent(of: .value, with: { (snapshot) in
             // Get user value
             let value = snapshot.value as? NSDictionary
             
             self.emailLabel.text = currentUser?.email
             self.nameLabel.text = value?["name"] as? String ?? ""
             self.birthdayLabel.text = value?["birthday"] as? String ?? ""
-            self.phoneLabel.text = value?["phone"] as? String ?? ""
+            self.phoneLabel.text = value?["phonenumber"] as? String ?? ""
             
             // ...
         }) { (error) in
