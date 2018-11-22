@@ -11,22 +11,26 @@ import Firebase
 
 class InitialViewController: UIViewController {
     
+    var window: UIWindow?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let firebaseAuth = Auth.auth()
-        let currentUser = firebaseAuth.currentUser
-        
-//        if currentUser != nil {
-//            let st = self.storyboard
-//            let vc = st?.instantiateViewController(withIdentifier: "TabBarMain") as! UITabBarController
-//            
-//            self.present(vc, animated: true, completion: nil)
-//            
-//        }
-        
 
         // Do any additional setup after loading the view.
+        userSessionObserver()
+    }
+    
+    func userSessionObserver() {
+        let authListener = Auth.auth().addStateDidChangeListener { auth, user in
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+
+            if user != nil {
+                //
+                let controller = storyboard.instantiateViewController(withIdentifier: "MainTabBarController") as! UITabBarController
+                self.window?.rootViewController = controller
+                self.present(controller, animated: false, completion: nil)
+            }
+        }
     }
     
 

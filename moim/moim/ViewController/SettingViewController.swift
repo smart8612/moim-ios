@@ -12,6 +12,7 @@ class SettingViewController: UIViewController {
 
     @IBOutlet var signOutButton: UIBarButtonItem!
     let fireBaseAuth = Auth.auth()
+    var window: UIWindow?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,7 @@ class SettingViewController: UIViewController {
         
         do {
             try fireBaseAuth.signOut()
+            self.window?.rootViewController = vc
             self.present(vc, animated: true, completion: nil)
                 
         } catch let signOutError as NSError {
