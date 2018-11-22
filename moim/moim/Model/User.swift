@@ -13,11 +13,19 @@ class User {
     var uid: String
     var email: String
     var name: String
+    var nickname: String
+    var gender: String
+    var birthday: String
+    var phoneNumber: String
     
-    init(uid:String, email: String, username: String) {
+    init(uid:String, email: String, userName: String, nickName: String, gender: String, birthDay: String, phoneNumber: String) {
         self.uid = uid
         self.email = email
-        self.name = username
+        self.name = userName
+        self.nickname = nickName
+        self.gender = gender
+        self.birthday = birthDay
+        self.phoneNumber = phoneNumber
         
     }
     
@@ -25,7 +33,11 @@ class User {
         return [
             "uid": self.uid,
             "email": self.email,
-            "name": self.name
+            "name": self.name,
+            "nickname": self.nickname,
+            "gender": self.gender,
+            "birthday": self.birthday,
+            "phonenumber": self.phoneNumber
         ]
     }
 }

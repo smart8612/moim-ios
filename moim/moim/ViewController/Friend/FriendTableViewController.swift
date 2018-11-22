@@ -75,8 +75,8 @@ class FriendTableViewController: UITableViewController {
                     let uid = dic["uid"],
                     let name = dic["name"],
                     let email = dic["email"] {
-                    let tmpUser = User(uid: uid, email: email, username: name)
-                    self.userObjArray.append(tmpUser)
+//                    let tmpUser = User(uid: uid, email: email, username: name,)
+//                    self.userObjArray.append(tmpUser)
                 }
             }
             print(self.userObjArray)
