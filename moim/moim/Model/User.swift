@@ -37,7 +37,7 @@ class User {
             "nickname": self.nickname,
             "gender": self.gender,
             "birthday": self.birthday,
-            "phonenumber": self.phoneNumber
+            "phone": self.phoneNumber
         ]
     }
 }

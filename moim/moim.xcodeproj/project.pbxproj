@@ -157,10 +157,10 @@
 			children = (
 				12F03310215D151600DC1020 /* SignUpViewController.swift */,
 				12F0330E215CF6D000DC1020 /* LoginViewController.swift */,
-				12C66FD7215CA536001A5680 /* InitialViewController.swift */,
 				12AB8F1221A6989C0076349C /* SignUpEmailViewController.swift */,
 				12AB8F1421A698C60076349C /* SignUpPasswordViewController.swift */,
 				12AB8F1621A698E60076349C /* SiginUpPersonalViewController.swift */,
+				12C66FD7215CA536001A5680 /* InitialViewController.swift */,
 			);
 			path = UserSignVC;
 			sourceTree = "<group>";

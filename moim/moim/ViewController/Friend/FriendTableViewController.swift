@@ -12,6 +12,7 @@ import Firebase
 class FriendTableViewController: UITableViewController {
     
     var users = [User]()
+    var userCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,19 +22,16 @@ class FriendTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        observeUserInformation()
         tableView.rowHeight = 200
-        tableView.reloadData()
   
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        clearUserData()
         observeUserInformation()
         tableView.reloadData()
-        
     }
     
     func clearUserData() {
@@ -41,28 +39,29 @@ class FriendTableViewController: UITableViewController {
     }
     
     func observeUserInformation() {
-        let usersRef = Database.database().reference().child("users")
+        let userRef = Database.database().reference().child("users")
         
-        usersRef.observe(.value, with: { snapshot in
-            for child in snapshot.children {
-                print(child)
-                guard let childSnapshot = child as? DataSnapshot else { return }
-                guard let snapshotDic = childSnapshot.value as? Dictionary<String, Any> else { return }
-                guard let uid = snapshotDic["uid"] as? String else { return }
-                guard let email = snapshotDic["email"] as? String else { return }
-                guard let name = snapshotDic["name"] as? String else { return }
-                guard let nickname = snapshotDic["name"] as? String else { return }
-                guard let gender = snapshotDic["gender"] as? String else { return }
-                guard let birthday = snapshotDic["birthday"] as? String else { return }
-                guard let phonenumber = snapshotDic["phonenumber"] as? String else { return }
+        userRef.observeSingleEvent(of: .value, with: { snapshot in
+            for child in snapshot.children.allObjects {
+                let user = child as! DataSnapshot
+                let userDic = user.value as! Dictionary<String, Any>
                 
-                let tmpUser = User(uid: uid, email: email, userName: name, nickName: nickname, gender: gender, birthDay: birthday, phoneNumber: phonenumber)
-                self.users.append(tmpUser)
+                guard let uid = userDic["uid"] else { return }
+                guard let email = userDic["email"] else { return }
+                guard let name = userDic["name"] else { return }
+                guard let nickname = userDic["nickname"] else { return }
+                guard let gender = userDic["gender"] else { return }
+                guard let birthday = userDic["birthday"] else { return }
+                guard let phone = userDic["phone"] else { return }
                 
+                let newUser = User(uid: uid as! String, email: email as! String, userName: name as! String, nickName: nickname as! String, gender: gender as! String, birthDay: birthday as! String, phoneNumber: phone as! String)
+                
+                if newUser.uid != Auth.auth().currentUser!.uid {
+                    self.users.append(newUser)
+                }
+                self.tableView.reloadData()
             }
-            self.tableView.reloadData()
         })
-        print(self.users)
     }
 
 
