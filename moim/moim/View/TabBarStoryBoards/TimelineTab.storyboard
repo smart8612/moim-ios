@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Time Line Table View Controller-->
+        <!--TimeLine-->
         <scene sceneID="p3E-ci-ku2">
             <objects>
                 <tableViewController id="vQm-EI-LVu" customClass="TimeLineTableViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
@@ -32,7 +32,7 @@
                             <outlet property="delegate" destination="vQm-EI-LVu" id="8C3-VQ-aBe"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="SAK-Pp-jBu">
+                    <navigationItem key="navigationItem" title="TimeLine" id="SAK-Pp-jBu">
                         <barButtonItem key="leftBarButtonItem" title="USer" id="v8l-vB-ggd">
                             <connections>
                                 <segue destination="8w4-X2-lPO" kind="show" id="Pvc-OD-5Ax"/>
@@ -101,8 +101,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qX8-0D-IKt" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="TimeLine" image="first" id="rhA-M2-QpE"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qKL-o9-473">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="qKL-o9-473">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="-3466" y="-1272"/>
         </scene>
-        <!--User Information View Controller-->
+        <!--Profile-->
         <scene sceneID="TSo-Wc-58q">
             <objects>
-                <viewController id="8w4-X2-lPO" customClass="UserInformationViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Profile" id="8w4-X2-lPO" customClass="UserInformationViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ee5-nn-Jgl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

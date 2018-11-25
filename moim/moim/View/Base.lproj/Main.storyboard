@@ -86,8 +86,8 @@
             <objects>
                 <navigationController storyboardIdentifier="loginNavigationView" automaticallyAdjustsScrollViewInsets="NO" id="SLo-sx-p2y" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XJj-Ez-ApD">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="XJj-Ez-ApD">
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -99,7 +99,7 @@
             </objects>
             <point key="canvasLocation" x="-5190" y="-2784"/>
         </scene>
-        <!--Initial View Controller-->
+        <!--Moim-->
         <scene sceneID="q48-fG-0fv">
             <objects>
                 <viewController storyboardIdentifier="InitialViewController" id="Vul-nI-ibw" customClass="InitialViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
@@ -149,27 +149,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lIP-h0-jGv"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XPr-vZ-mAh"/>
+                    <navigationItem key="navigationItem" title="Moim" id="XPr-vZ-mAh"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Bc-sn-nC7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-5191" y="-2058"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="zOI-Y0-Oca">
             <objects>
-                <viewController id="4Bx-rF-8LZ" customClass="LoginViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login" id="4Bx-rF-8LZ" customClass="LoginViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MRo-z9-Leb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kiz-A3-oGS">
-                                <rect key="frame" x="84" y="141" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write Your ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hDC-hR-qju">
                                 <rect key="frame" x="84" y="291" width="206" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -192,6 +185,13 @@
                                     <action selector="signInButtonClicked:" destination="4Bx-rF-8LZ" eventType="touchUpInside" id="5E2-4S-u04"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kiz-A3-oGS">
+                                <rect key="frame" x="16" y="214" width="343" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="NyY-LC-O0u"/>
@@ -204,12 +204,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kd1-QA-3Qc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4686" y="-916"/>
+            <point key="canvasLocation" x="-4687.1999999999998" y="-916.25615763546807"/>
         </scene>
-        <!--Sign Up Email View Controller-->
+        <!--Sign Up-->
         <scene sceneID="hjE-Qc-QFr">
             <objects>
-                <viewController id="6po-D7-riO" customClass="SignUpEmailViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Sign Up" id="6po-D7-riO" customClass="SignUpEmailViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FxJ-bW-rQ5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,7 +295,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="oAN-Fp-5CB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="tOe-Jh-G7m"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="tOe-Jh-G7m"/>
                     <connections>
                         <outlet property="passwordField" destination="d5P-Hj-Jgk" id="QU2-h9-aG5"/>
                         <segue destination="Xcy-U9-mEK" kind="show" identifier="showPersonalSegue" id="kNp-Me-rBf"/>

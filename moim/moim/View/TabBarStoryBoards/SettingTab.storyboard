@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Moim-->
+        <!--Setting-->
         <scene sceneID="rMA-J9-MbX">
             <objects>
                 <viewController id="BWd-kx-1Lh" customClass="SettingViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="efZ-kj-jZc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Moim" id="bcI-IF-Mv9">
+                    <navigationItem key="navigationItem" title="Setting" id="bcI-IF-Mv9">
                         <barButtonItem key="leftBarButtonItem" title="User" id="VPT-cm-ATy"/>
                         <barButtonItem key="rightBarButtonItem" title="Sign Out" id="y1o-R8-gnT">
                             <connections>
@@ -38,8 +38,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k7e-ub-der" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="setting" id="Wcm-XW-wVz"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pLr-bU-giS">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="pLr-bU-giS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

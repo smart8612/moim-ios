@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Moim-->
+        <!--Notification-->
         <scene sceneID="GbE-Fu-ukB">
             <objects>
                 <tableViewController id="mjP-fM-BNu" customClass="NotificationTableViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,7 +48,7 @@
                             <outlet property="delegate" destination="mjP-fM-BNu" id="51k-hA-Tbs"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Moim" id="HBu-N6-9ED"/>
+                    <navigationItem key="navigationItem" title="Notification" id="HBu-N6-9ED"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K27-st-yt0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,8 +60,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z7U-ds-BqZ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="notification" id="IYv-Gy-Zup"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fDj-rz-g09">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="fDj-rz-g09">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
