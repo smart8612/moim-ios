@@ -27,46 +27,59 @@ class TimeLineTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        tableView.reloadData()
-        
-        observePosts()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         tableView.reloadData()
-        observePosts()
+        postsInitializer()
         
     }
     
 
     // MARK: - Table view data source
     
-    func observePosts() {
-        let postsRef = Database.database().reference().child("timeline")
-        
-        postsRef.observe(.value, with: { snapshot in
+    private func observePosts(snapshot: DataSnapshot, uid: String) {
+        for snapshotChild in snapshot.children.allObjects {
+            let friend = snapshotChild as! DataSnapshot
+            let postsRef = Database.database().reference().child("posts/\(friend.key)")
             
-            var postList = [Post]()
-            
-            for child in snapshot.children {
-                if let childSnapshot = child as? DataSnapshot,
-                    let dict = childSnapshot.value as? [String:Any],
-                    let author = dict["name"] as? String,
-                    let text = dict["text"] as? String {
+            postsRef.observe(.value, with: { postSnapshot in
+                for child in postSnapshot.children.allObjects {
+                    let post = child as! DataSnapshot
+                    let postDic = post.value as! Dictionary<String, String>
                     
-                    // let post = Post(author: author, text: text)
-                    // postList.append(post)
+                    guard let postId = postDic["postId"] else { return }
+                    guard let text = postDic["text"] else { return }
+                    guard let url = postDic["url"] else { return }
+                    
+                    let tmpPost = Post(uid: uid, postId: postId, text: text, url: url)
+                    self.posts.append(tmpPost)
                 }
-            }
-            
-            self.posts = postList.reversed()
-            self.tableView.reloadData()
-            
-        })
+                print(self.posts)
+                self.tableView.reloadData()
+            })
+        }
 
+    }
+    
+    func postsInitializer() {
+        let firebaseAuth = Auth.auth()
+        guard let currentUid = firebaseAuth.currentUser?.uid else { return }
+        let userRef = Database.database().reference().child("users/\(currentUid)/friends")
+        
+        clearPostsList()
+        
+        userRef.observeSingleEvent(of: .value, with: {snapshot in
+            if snapshot.exists() {
+                self.observePosts(snapshot: snapshot, uid: currentUid)
+            }
+        })
+    }
+    
+    func clearPostsList() {
+        self.posts.removeAll()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
