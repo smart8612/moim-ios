@@ -32,7 +32,7 @@ class PostTableViewCell: UITableViewCell {
     }
     
     func set(post:Post) {
-        usernameLabel.text = post.name
+        // usernameLabel.text = post.name
         postTextLabel.text = post.text
     }
     

@@ -29,14 +29,16 @@ class TimeLineViewController: UIViewController {
     @IBAction func sendButtonClicked(_ sender: UIButton) {
         ref = Database.database().reference()
         let fireBaseAuth = Auth.auth()
-        let postRef = self.ref.child("timeline/\(Date().millisecondsSince1970)")
         
-        if let name: String = fireBaseAuth.currentUser?.email,
-            let text: String = textField.text {
-            let tmpPost = Post(author: name, text: text)
-            self.post = tmpPost.getPostDataDictionary()
-            
-        }
+        guard let uid = fireBaseAuth.currentUser?.uid else { return }
+        guard let text = textField.text else { return }
+        let postId = String(Date().millisecondsSince1970)
+        let url = String()
+        
+        let tmpPost = Post(uid: uid, postId: postId, text: text, url: url)
+        self.post = tmpPost.getPostDataDictionary()
+        
+        let postRef = self.ref.child("posts/\(uid)/\(postId)")
         
         postRef.setValue(post, withCompletionBlock: { error, ref in
             if error == nil {

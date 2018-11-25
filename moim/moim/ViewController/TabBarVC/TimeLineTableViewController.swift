@@ -57,8 +57,8 @@ class TimeLineTableViewController: UITableViewController {
                     let author = dict["name"] as? String,
                     let text = dict["text"] as? String {
                     
-                    let post = Post(author: author, text: text)
-                    postList.append(post)
+                    // let post = Post(author: author, text: text)
+                    // postList.append(post)
                 }
             }
             

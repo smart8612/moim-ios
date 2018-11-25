@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class FriendTableViewCell: UITableViewCell {
     
@@ -14,6 +15,7 @@ class FriendTableViewCell: UITableViewCell {
     @IBOutlet var friendNameLabel: UILabel!
     @IBOutlet var friendStatusLabel: UILabel!
     @IBOutlet var friendAddButton: UIButton!
+    var uid: String!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,5 +27,11 @@ class FriendTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    @IBAction func addButtonClicked(_ sender: UIButton) {
+        let user = Auth.auth().currentUser?.uid
+        let userRef = Database.database().reference().child("users/\(user!)/friends/\(self.uid!)")
+        userRef.setValue(true)
+        print("finish!")
+    }
 }

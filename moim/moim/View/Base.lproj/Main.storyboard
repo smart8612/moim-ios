@@ -125,6 +125,11 @@
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="6po-D7-riO" kind="show" id="a1u-vt-tEQ"/>
                                 </connections>

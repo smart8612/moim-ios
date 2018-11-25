@@ -10,18 +10,24 @@ import Foundation
 
 
 class Post {
-    var name: String
+    var uid: String
+    var postId: String
     var text: String
+    var imageURL: String
     
-    init(author: String, text: String) {
-        self.name = author
+    init(uid: String, postId: String, text: String, url: String) {
+        self.uid = uid
+        self.postId = postId
         self.text = text
+        self.imageURL = url
     }
     
     func getPostDataDictionary() -> Dictionary<String, String> {
         return [
-            "name": self.name,
-            "text": self.text
+            "uid": self.uid,
+            "postId": self.postId,
+            "text": self.text,
+            "url": self.imageURL
         ]
     }
 }

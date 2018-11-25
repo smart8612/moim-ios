@@ -43,6 +43,9 @@
                                             <rect key="frame" x="180" y="90" width="75" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Add Friend"/>
+                                            <connections>
+                                                <action selector="addButtonClicked:" destination="h36-eS-60Z" eventType="touchUpInside" id="ioq-JI-oxa"/>
+                                            </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v0f-KM-bJ0">
                                             <rect key="frame" x="16" y="0.0" width="116" height="127"/>
