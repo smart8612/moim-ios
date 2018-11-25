@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class PostTableViewCell: UITableViewCell {
 
@@ -31,8 +32,7 @@ class PostTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func set(post:Post) {
-        // usernameLabel.text = post.name
+    func set(post: Post) {
         postTextLabel.text = post.text
     }
     

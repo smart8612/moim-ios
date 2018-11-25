@@ -31,8 +31,6 @@ class TimeLineTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        tableView.reloadData()
         postsInitializer()
         
     }
@@ -45,7 +43,7 @@ class TimeLineTableViewController: UITableViewController {
             let friend = snapshotChild as! DataSnapshot
             let postsRef = Database.database().reference().child("posts/\(friend.key)")
             
-            postsRef.observe(.value, with: { postSnapshot in
+            postsRef.observeSingleEvent(of: .value, with: { postSnapshot in
                 for child in postSnapshot.children.allObjects {
                     let post = child as! DataSnapshot
                     let postDic = post.value as! Dictionary<String, String>
@@ -97,7 +95,21 @@ class TimeLineTableViewController: UITableViewController {
 
         // Configure the cell...
         let row = indexPath.row
-        cell.set(post: self.posts[row])
+        
+        let userRef = Database.database().reference().child("users/\(self.posts[row].uid)")
+        userRef.observeSingleEvent(of: .value, with: { snapshot in
+            for child in snapshot.children.allObjects {
+                let infoSnapshot = child as! DataSnapshot
+                
+                if infoSnapshot.key == "name" {
+                    cell.usernameLabel.text = infoSnapshot.value as? String
+                    break
+                }
+                
+            }
+            cell.set(post: self.posts[row])
+            
+        })
 
         return cell
     }

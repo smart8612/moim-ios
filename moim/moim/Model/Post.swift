@@ -14,6 +14,7 @@ class Post {
     var postId: String
     var text: String
     var imageURL: String
+    var name: String!
     
     init(uid: String, postId: String, text: String, url: String) {
         self.uid = uid
