@@ -20,18 +20,48 @@ class FriendTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        let user = Auth.auth().currentUser?.uid
+        let userRef = Database.database().reference().child("users/\(user!)/friends/\(self.uid ?? "")")
+        
+        userRef.observeSingleEvent(of: .value, with: { snapshot in
+            
+            if snapshot.exists() {
+                self.friendAddButton.setTitle("UnFollow", for: .normal)
+                
+            } else {
+                self.friendAddButton.setTitle("Add Friend", for: .normal)
+                
+            }
+            
+        })
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+//    override func setSelected(_ selected: Bool, animated: Bool) {
+//        super.setSelected(selected, animated: animated)
+//
+//        // Configure the view for the selected state
+//    }
     
     @IBAction func addButtonClicked(_ sender: UIButton) {
         let user = Auth.auth().currentUser?.uid
         let userRef = Database.database().reference().child("users/\(user!)/friends/\(self.uid!)")
-        userRef.setValue(true)
-        print("finish!")
+        
+        userRef.observeSingleEvent(of: .value, with: { snapshot in
+            
+            if snapshot.exists() {
+                sender.setTitle("Add Friend", for: .normal)
+                userRef.removeValue()
+                
+            } else {
+                sender.setTitle("UnFollow", for: .normal)
+                userRef.setValue(true)
+            }
+            
+        })
     }
+    
+    func changeFollowStatus() {
+        
+    }
+    
 }
