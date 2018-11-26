@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Setting-->
+        <!--Settings-->
         <scene sceneID="rMA-J9-MbX">
             <objects>
                 <viewController id="BWd-kx-1Lh" customClass="SettingViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="efZ-kj-jZc"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Setting" id="bcI-IF-Mv9">
+                    <navigationItem key="navigationItem" title="Settings" id="bcI-IF-Mv9">
                         <barButtonItem key="leftBarButtonItem" title="User" id="VPT-cm-ATy"/>
                         <barButtonItem key="rightBarButtonItem" title="Sign Out" id="y1o-R8-gnT">
                             <connections>

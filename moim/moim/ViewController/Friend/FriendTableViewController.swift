@@ -81,6 +81,7 @@ class FriendTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendTableCell", for: indexPath) as! FriendTableViewCell
         
+        cell.selectionStyle = .none
         let row = indexPath.row
         
         

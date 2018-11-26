@@ -20,8 +20,6 @@ class TimeLineTableViewController: UITableViewController {
         let cellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "PostTableViewCell")
         tableView.backgroundColor = UIColor(white: 0.90,alpha:1.0)
-        tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 300
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -35,7 +33,6 @@ class TimeLineTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         clearPostsList()
         postsInitializer()
-        print(self.posts)
         self.tableView.reloadData()
         
     }
@@ -61,6 +58,9 @@ class TimeLineTableViewController: UITableViewController {
                     self.posts.append(tmpPost)
                 }
                 print(self.posts)
+                self.posts.sort(by: { (posta: Post, postb: Post) -> Bool in
+                    return posta.postId > postb.postId
+                })
                 self.tableView.reloadData()
             })
         }
@@ -99,6 +99,7 @@ class TimeLineTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostTableViewCell", for: indexPath) as! PostTableViewCell
 
         // Configure the cell...
+        cell.selectionStyle = .none
         let row = indexPath.row
         
         let userRef = Database.database().reference().child("users/\(self.posts[row].uid)")
