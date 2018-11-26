@@ -88,6 +88,7 @@ class FriendTableViewController: UITableViewController {
 //        cell.friendProfileImage.image = UIImage(named: friendImage[0])
         cell.friendStatusLabel.text = users[row].email
         cell.uid = users[row].uid
+        cell.changeFollowStatus(uid: self.users[row].uid)
 
         // Configure the cell...
 

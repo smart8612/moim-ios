@@ -20,7 +20,6 @@ class FriendTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        changeFollowStatus()
     }
 
 //    override func setSelected(_ selected: Bool, animated: Bool) {
@@ -47,9 +46,9 @@ class FriendTableViewCell: UITableViewCell {
         })
     }
     
-    func changeFollowStatus() {
+    func changeFollowStatus(uid: String) {
         let user = Auth.auth().currentUser?.uid
-        let userRef = Database.database().reference().child("users/\(user!)/friends/\(self.uid ?? "")")
+        let userRef = Database.database().reference().child("users/\(user!)/friends/\(uid)")
         
         userRef.observeSingleEvent(of: .value, with: { snapshot in
             
