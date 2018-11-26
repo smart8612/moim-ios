@@ -34,4 +34,9 @@ class PostTableViewCell: UITableViewCell {
         postTextLabel.text = post.text
     }
     
+    // When Editing textfield is finished, Hide Keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.endEditing(true)
+        
+    }
 }
