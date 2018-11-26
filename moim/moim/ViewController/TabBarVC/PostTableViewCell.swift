@@ -15,6 +15,8 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var postTextLabel: UILabel!
+    @IBOutlet weak var commentLabel: UITextField!
+    var post: Post!
     
     
     
@@ -31,6 +33,7 @@ class PostTableViewCell: UITableViewCell {
     }
     
     func set(post: Post) {
+        self.post = post
         postTextLabel.text = post.text
     }
     
@@ -39,4 +42,19 @@ class PostTableViewCell: UITableViewCell {
         self.endEditing(true)
         
     }
+    
+    @IBAction func sendButtonClicked(_ sender: UIButton) {
+        let currentUid = Auth.auth().currentUser?.uid
+        let postId = self.post.postId
+        let commentId = Date().millisecondsSince1970
+        let commentRef = Database.database().reference().child("comments/\(postId)/\(commentId)")
+        
+        commentRef.setValue([
+            "uid": currentUid,
+            "text": commentLabel.text
+        ])
+        
+        commentLabel.text = nil
+    }
+    
 }

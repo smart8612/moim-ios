@@ -8,10 +8,15 @@
 
 import UIKit
 import Firebase
+import ViewAnimator
 
 class TimeLineTableViewController: UITableViewController {
     
-    var posts = [Post]()
+    private var posts = [Post]()
+    private let activityIndicator = UIActivityIndicatorView(style: .gray)
+    let fromAnimation = AnimationType.from(direction: .right, offset: 30.0)
+    let zoomAnimation = AnimationType.zoom(scale: 0.2)
+    let rotateAnimation = AnimationType.rotate(angle: CGFloat.pi/6)
 
     override func viewDidLoad() {
         
@@ -20,7 +25,9 @@ class TimeLineTableViewController: UITableViewController {
         let cellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "PostTableViewCell")
         tableView.backgroundColor = UIColor(white: 0.90,alpha:1.0)
-
+        
+        setupActivityIndicator()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -31,12 +38,29 @@ class TimeLineTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        clearPostsList()
         postsInitializer()
-        self.tableView.reloadData()
-        
     }
     
+    private func setupActivityIndicator() {
+        activityIndicator.center = CGPoint(x: view.center.x, y: 100.0)
+        activityIndicator.hidesWhenStopped = true
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+    }
+    
+    func setUpAnimation() {
+        activityIndicator.stopAnimating()
+        tableView.reloadData()
+        UIView.animate(
+            views: tableView.visibleCells,
+            animations: [
+                fromAnimation,
+                zoomAnimation
+            ],
+            delay: 0.5
+        )
+    }
+
 
     // MARK: - Table view data source
     
@@ -62,6 +86,7 @@ class TimeLineTableViewController: UITableViewController {
                     return posta.postId > postb.postId
                 })
                 self.tableView.reloadData()
+                self.setUpAnimation()
             })
         }
 
@@ -71,9 +96,7 @@ class TimeLineTableViewController: UITableViewController {
         let firebaseAuth = Auth.auth()
         guard let currentUid = firebaseAuth.currentUser?.uid else { return }
         let userRef = Database.database().reference().child("users/\(currentUid)/friends")
-        
-        clearPostsList()
-        
+        self.clearPostsList()
         userRef.observeSingleEvent(of: .value, with: {snapshot in
             if snapshot.exists() {
                 self.observePosts(snapshot: snapshot, uid: currentUid)

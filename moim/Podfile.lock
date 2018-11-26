@@ -83,6 +83,7 @@ PODS:
   - SwifterSwift/SpriteKit (4.6.0)
   - SwifterSwift/SwiftStdlib (4.6.0)
   - SwifterSwift/UIKit (4.6.0)
+  - ViewAnimator (2.2.0)
 
 DEPENDENCIES:
   - ARCL
@@ -90,6 +91,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - SwifterSwift
+  - ViewAnimator
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -107,6 +109,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - SwifterSwift
+    - ViewAnimator
 
 SPEC CHECKSUMS:
   ARCL: 5fd2b0d7aabf91f15dbc0e8c510b25516b8a755a
@@ -123,7 +126,8 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   SwifterSwift: 812ffec6f301922f5430e75be3f2939ea3a80024
+  ViewAnimator: a849844cc3698620e1a562b510ed0c28aeafcdc5
 
-PODFILE CHECKSUM: 5884c088d185d37d4fd1ef77a53b05bd20270393
+PODFILE CHECKSUM: d254b9cc7425c9e460a059f5b89753862abd5086
 
 COCOAPODS: 1.5.3

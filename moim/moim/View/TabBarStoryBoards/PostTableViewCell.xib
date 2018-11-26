@@ -75,7 +75,7 @@
                                 </constraints>
                                 <state key="normal" title="Send"/>
                                 <connections>
-                                    <action selector="sendButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="GvL-03-Tv8"/>
+                                    <action selector="sendButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="SKA-YX-mCG"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="write comments" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Xkc-fn-5Ew">
@@ -127,6 +127,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="commentLabel" destination="Xkc-fn-5Ew" id="Wtn-r2-gwC"/>
                 <outlet property="postTextLabel" destination="Vnc-Hj-wr3" id="DAV-I6-Xj4"/>
                 <outlet property="profileImageView" destination="1z3-UK-S85" id="Q42-hL-cUH"/>
                 <outlet property="subtitleLabel" destination="9im-lT-cl4" id="9rh-Oz-V74"/>

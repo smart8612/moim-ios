@@ -11,6 +11,7 @@ target 'moim' do
   pod 'Firebase/Database'
   pod 'ARCL'
   pod 'SwifterSwift'
+  pod 'ViewAnimator'
   
   # Pods for moim
 
