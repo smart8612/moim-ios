@@ -27,11 +27,16 @@ class TimeLineTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        postsInitializer()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        clearPostsList()
         postsInitializer()
+        print(self.posts)
+        self.tableView.reloadData()
         
     }
     
