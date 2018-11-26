@@ -18,11 +18,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationLevel="2" indentationWidth="10" reuseIdentifier="FriendTableCell" rowHeight="214" id="h36-eS-60Z" customClass="FriendTableViewCell" customModule="moim" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="214"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationLevel="2" indentationWidth="10" reuseIdentifier="FriendTableCell" focusStyle="custom" rowHeight="133" id="h36-eS-60Z" customClass="FriendTableViewCell" customModule="moim" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="133"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h36-eS-60Z" id="gaA-Ng-vVa">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="213.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="132.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QuP-n0-Ymg">
@@ -53,6 +53,7 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                                 <connections>
                                     <outlet property="friendAddButton" destination="mBy-wF-Ift" id="KXt-m2-SdK"/>
                                     <outlet property="friendNameLabel" destination="QuP-n0-Ymg" id="kMJ-cx-q0F"/>
@@ -76,7 +77,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QAR-S5-ID6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1180" y="-474.38423645320199"/>
+            <point key="canvasLocation" x="-1180" y="-474.51274362818594"/>
         </scene>
         <!--Friends-->
         <scene sceneID="oSE-sa-yKD">

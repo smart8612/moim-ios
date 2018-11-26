@@ -20,14 +20,14 @@ class TimeLineTableViewController: UITableViewController {
         let cellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "PostTableViewCell")
         tableView.backgroundColor = UIColor(white: 0.90,alpha:1.0)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 300
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        
-        postsInitializer()
         
     }
     
