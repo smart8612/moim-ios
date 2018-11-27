@@ -35,7 +35,7 @@
         <scene sceneID="spf-Kl-yj0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k7e-ub-der" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="setting" id="Wcm-XW-wVz"/>
+                    <tabBarItem key="tabBarItem" title="setting" image="settings" id="Wcm-XW-wVz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="pLr-bU-giS">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -51,4 +51,7 @@
             <point key="canvasLocation" x="1097" y="-1272"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settings" width="30" height="30"/>
+    </resources>
 </document>

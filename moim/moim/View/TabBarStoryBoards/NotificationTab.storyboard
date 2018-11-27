@@ -58,7 +58,7 @@
         <scene sceneID="Npz-tu-MyT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z7U-ds-BqZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="notification" id="IYv-Gy-Zup"/>
+                    <tabBarItem key="tabBarItem" title="notification" image="bell" id="IYv-Gy-Zup"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="fDj-rz-g09">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -74,4 +74,7 @@
             <point key="canvasLocation" x="18" y="-1272"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bell" width="30" height="30"/>
+    </resources>
 </document>

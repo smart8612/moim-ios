@@ -35,7 +35,7 @@
         <scene sceneID="ErH-o3-loL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rCU-CT-lG7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="AR Event" image="second" id="Ybo-Dx-Q3x"/>
+                    <tabBarItem key="tabBarItem" title="AR Event" image="geo_fence" id="Ybo-Dx-Q3x"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="KKb-ro-k49">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
@@ -78,6 +78,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="second" width="30" height="30"/>
+        <image name="geo_fence" width="30" height="30"/>
     </resources>
 </document>

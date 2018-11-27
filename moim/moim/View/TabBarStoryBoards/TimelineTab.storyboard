@@ -123,7 +123,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="98W-QW-GYy">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98W-QW-GYy">
                                 <rect key="frame" x="0.0" y="734" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
@@ -158,7 +158,7 @@
         <scene sceneID="E7X-Ue-zbu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qX8-0D-IKt" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="TimeLine" image="first" id="rhA-M2-QpE"/>
+                    <tabBarItem key="tabBarItem" title="TimeLine" image="ball_point_pen" id="rhA-M2-QpE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="qKL-o9-473">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
@@ -254,6 +254,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="ball_point_pen" width="30" height="30"/>
     </resources>
 </document>
