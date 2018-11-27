@@ -13,6 +13,7 @@ class CommentsTableViewController: UITableViewController {
     
     var data: Any?
     var cellDataInfo: Dictionary<String, Any>!
+    var comments = [Comment]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,29 +32,21 @@ class CommentsTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         commentsInitialize()
+        tableView.reloadData()
     }
     
     private func observeComments(snapshot: DataSnapshot) {
         for snapshotChild in snapshot.children.allObjects {
             let comments = snapshotChild as! DataSnapshot
-            print(comments)
-//            let postsRef = Database.database().reference().child("posts/\(friend.key)")
-//
-//            postsRef.observeSingleEvent(of: .value, with: { postSnapshot in
-//                for child in postSnapshot.children.allObjects {
-//                    let post = child as! DataSnapshot
-//                    let postDic = post.value as! Dictionary<String, Any>
-//
-//                    guard let postId = postDic["postId"] as? String else { return }
-//                    guard let text = postDic["text"] as? String else { return }
-//                    guard let url = postDic["url"] as? String else { return }
-//
-//                    let tmpPost = Post(uid: friend.key, postId: postId, text: text, url: url)
-//
-//                }
-//            })
+            
+            let timeStamp = Int(comments.key)
+            let commentDic = comments.value as! Dictionary<String, Any>
+            let uid = commentDic["uid"] as! String
+            let text = commentDic["text"] as! String
+            let tmpComment = Comment(uid: uid, text: text, timeStamp: timeStamp!)
+            self.comments.append(tmpComment)
         }
-        
+        tableView.reloadData()
     }
     
     func commentsInitialize() {
@@ -62,35 +55,55 @@ class CommentsTableViewController: UITableViewController {
         let post = posts[index]
         let url = "posts/\(post.uid)/\(post.postId)/comments"
         let commentsRef = Database.database().reference().child(url)
-        
+        resetComments()
         commentsRef.observeSingleEvent(of: .value, with: {snapshot in
             self.observeComments(snapshot: snapshot)
         })
         
     
     }
+    
+    func resetComments() {
+        self.comments.removeAll()
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.comments.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "commentsCell", for: indexPath) as! CommentTableViewCell
 
         // Configure the cell...
-
+        cell.selectionStyle = .none
+        let row = indexPath.row
+        let userRef = Database.database().reference().child("users/\(self.comments[row].uid)")
+        userRef.observeSingleEvent(of: .value, with: { snapshot in
+            for child in snapshot.children.allObjects {
+                let infoSnapshot = child as! DataSnapshot
+                
+                if infoSnapshot.key == "name" {
+                    let name = infoSnapshot.value as? String
+                    let text = self.comments[row].text
+                    cell.setCommentCell(name: name!, comment: text)
+                    break
+                }
+                
+            }
+        })
+        
+        
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
