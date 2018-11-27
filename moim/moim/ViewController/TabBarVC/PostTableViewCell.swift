@@ -16,6 +16,7 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var postTextLabel: UILabel!
     @IBOutlet weak var commentLabel: UITextField!
+    @IBOutlet weak var commentButton: UIButton!
     var post: Post!
     
     
@@ -44,11 +45,11 @@ class PostTableViewCell: UITableViewCell {
     }
     
     @IBAction func sendButtonClicked(_ sender: UIButton) {
+        let postUid = self.post.uid
         let currentUid = Auth.auth().currentUser?.uid
         let postId = self.post.postId
         let commentId = Date().millisecondsSince1970
-        let commentRef = Database.database().reference().child("comments/\(postId)/\(commentId)")
-        
+        let commentRef = Database.database().reference().child("posts/\(postUid)/\(postId)/comments/\(commentId)")
         commentRef.setValue([
             "uid": currentUid,
             "text": commentLabel.text

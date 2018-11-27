@@ -127,6 +127,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="commentButton" destination="A4c-1f-Oa6" id="6Bu-mA-Edy"/>
                 <outlet property="commentLabel" destination="Xkc-fn-5Ew" id="Wtn-r2-gwC"/>
                 <outlet property="postTextLabel" destination="Vnc-Hj-wr3" id="DAV-I6-Xj4"/>
                 <outlet property="profileImageView" destination="1z3-UK-S85" id="Q42-hL-cUH"/>

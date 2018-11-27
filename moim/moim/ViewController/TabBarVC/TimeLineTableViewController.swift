@@ -34,11 +34,20 @@ class TimeLineTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setupActivityIndicator()
         postsInitializer()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        clearPostsList()
+        tableView.reloadData()
     }
     
     private func setupActivityIndicator() {
@@ -72,13 +81,13 @@ class TimeLineTableViewController: UITableViewController {
             postsRef.observeSingleEvent(of: .value, with: { postSnapshot in
                 for child in postSnapshot.children.allObjects {
                     let post = child as! DataSnapshot
-                    let postDic = post.value as! Dictionary<String, String>
+                    let postDic = post.value as! Dictionary<String, Any>
                     
-                    guard let postId = postDic["postId"] else { return }
-                    guard let text = postDic["text"] else { return }
-                    guard let url = postDic["url"] else { return }
+                    guard let postId = postDic["postId"] as? String else { return }
+                    guard let text = postDic["text"] as? String else { return }
+                    guard let url = postDic["url"] as? String else { return }
                     
-                    let tmpPost = Post(uid: uid, postId: postId, text: text, url: url)
+                    let tmpPost = Post(uid: friend.key, postId: postId, text: text, url: url)
                     self.posts.append(tmpPost)
                 }
                 print(self.posts)
@@ -137,10 +146,15 @@ class TimeLineTableViewController: UITableViewController {
                 
             }
             cell.set(post: self.posts[row])
-            
+            cell.commentButton.tag = indexPath.row
+            cell.commentButton.addTarget(self, action: #selector(self.segueComments), for: .touchUpInside)
         })
 
         return cell
+    }
+    
+    @objc private func segueComments() {
+        performSegue(withIdentifier: "commentSegue", sender: self)
     }
 
     /*

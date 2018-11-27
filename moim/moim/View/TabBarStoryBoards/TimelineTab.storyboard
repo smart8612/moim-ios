@@ -12,7 +12,7 @@
         <!--Comments-->
         <scene sceneID="LBS-6H-84J">
             <objects>
-                <tableViewController title="Comments" id="pMp-LL-Irf" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CommentsTableView" title="Comments" id="pMp-LL-Irf" customClass="CommentsTableViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wa5-ya-0uJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,6 +32,7 @@
                             <outlet property="delegate" destination="pMp-LL-Irf" id="1Df-Xx-wPI"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Comments" id="jU8-9Y-grL"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2rK-yY-V86" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,7 +41,7 @@
         <!--TimeLine-->
         <scene sceneID="p3E-ci-ku2">
             <objects>
-                <tableViewController id="vQm-EI-LVu" customClass="TimeLineTableViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TimeLineTabeView" id="vQm-EI-LVu" customClass="TimeLineTableViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Veb-Wi-2AL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +74,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="pMp-LL-Irf" kind="show" identifier="showCommentsTable" id="jjb-YQ-t8E"/>
+                        <segue destination="pMp-LL-Irf" kind="push" identifier="commentSegue" id="n6B-df-Tq4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvW-nB-9j0" userLabel="First Responder" sceneMemberID="firstResponder"/>

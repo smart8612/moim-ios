@@ -20,7 +20,6 @@
                         <viewLayoutGuide key="safeArea" id="efZ-kj-jZc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="bcI-IF-Mv9">
-                        <barButtonItem key="leftBarButtonItem" title="User" id="VPT-cm-ATy"/>
                         <barButtonItem key="rightBarButtonItem" title="Sign Out" id="y1o-R8-gnT">
                             <connections>
                                 <action selector="signOutButtonClicked:" destination="BWd-kx-1Lh" id="YY7-ed-VHC"/>

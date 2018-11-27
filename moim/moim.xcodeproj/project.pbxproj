@@ -37,6 +37,7 @@
 		12C5B4FF215274EF000A98E3 /* moimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5B4FE215274EF000A98E3 /* moimTests.swift */; };
 		12C5B50A215274EF000A98E3 /* moimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5B509215274EF000A98E3 /* moimUITests.swift */; };
 		12C66FD8215CA536001A5680 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C66FD7215CA536001A5680 /* InitialViewController.swift */; };
+		12D521A321AC64D4000DA6DA /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D521A221AC64D4000DA6DA /* CommentsTableViewController.swift */; };
 		12F0330F215CF6D000DC1020 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F0330E215CF6D000DC1020 /* LoginViewController.swift */; };
 		12F03311215D151600DC1020 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F03310215D151600DC1020 /* SignUpViewController.swift */; };
 		3A2142C2F13730E34353CAD5 /* Pods_moimUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D0B1C54A911B6404BA504B /* Pods_moimUITests.framework */; };
@@ -98,6 +99,7 @@
 		12C5B509215274EF000A98E3 /* moimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moimUITests.swift; sourceTree = "<group>"; };
 		12C5B50B215274EF000A98E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12C66FD7215CA536001A5680 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		12D521A221AC64D4000DA6DA /* CommentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
 		12F0330E215CF6D000DC1020 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		12F03310215D151600DC1020 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		1B6A63878AC3157CCDD5EE97 /* Pods-moimTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moimTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moimTests/Pods-moimTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				12C5B4E9215274EE000A98E3 /* TimeLineViewController.swift */,
 				12C5B4EB215274EE000A98E3 /* AREventViewController.swift */,
 				12073E6E219484590079453F /* TimeLineTableViewController.swift */,
+				12D521A221AC64D4000DA6DA /* CommentsTableViewController.swift */,
 			);
 			path = TabBarVC;
 			sourceTree = "<group>";
@@ -565,6 +568,7 @@
 				12F0330F215CF6D000DC1020 /* LoginViewController.swift in Sources */,
 				12C66FD8215CA536001A5680 /* InitialViewController.swift in Sources */,
 				120E403C219A69F8005BBF4D /* User.swift in Sources */,
+				12D521A321AC64D4000DA6DA /* CommentsTableViewController.swift in Sources */,
 				12A7151721858FE80002F5B7 /* NotificationTableViewCell.swift in Sources */,
 				12AB8F1521A698C60076349C /* SignUpPasswordViewController.swift in Sources */,
 				12073E6F219484590079453F /* TimeLineTableViewController.swift in Sources */,

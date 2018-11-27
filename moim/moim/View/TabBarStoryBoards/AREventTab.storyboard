@@ -20,11 +20,6 @@
                         <viewLayoutGuide key="safeArea" id="HFY-nf-5zU"/>
                     </view>
                     <navigationItem key="navigationItem" title="AR Events" id="qkz-OC-iVH">
-                        <barButtonItem key="leftBarButtonItem" title="User" id="uk1-AK-7EY">
-                            <connections>
-                                <segue destination="Grl-7o-11u" kind="show" id="vuS-OQ-a8E"/>
-                            </connections>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Map" id="xE5-YO-awQ">
                             <connections>
                                 <segue destination="7jz-mQ-pn5" kind="show" id="El8-nu-i1f"/>
@@ -80,41 +75,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyx-ek-Kiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2351.1999999999998" y="634.632683658171"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="F04-gR-CsK">
-            <objects>
-                <viewController title="Profile" id="Grl-7o-11u" customClass="UserInformationViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0uC-f3-XJj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User E-mail Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEh-ae-J5H">
-                                <rect key="frame" x="55" y="243" width="265" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="UID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k0B-Z6-8ga">
-                                <rect key="frame" x="62" y="330" width="258" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="ak7-h2-b1V"/>
-                    </view>
-                    <connections>
-                        <outlet property="uidLabel" destination="k0B-Z6-8ga" id="lUi-Yn-gzC"/>
-                        <outlet property="userEmailLabel" destination="yEh-ae-J5H" id="fjf-Ue-yL0"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q39-jv-R6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1175.2" y="635.46798029556658"/>
         </scene>
     </scenes>
     <resources>
