@@ -153,8 +153,8 @@ class TimeLineTableViewController: UITableViewController {
         return cell
     }
     
-    @objc private func segueComments() {
-        performSegue(withIdentifier: "commentSegue", sender: self)
+    @objc private func segueComments(sender: UIButton) {
+        performSegue(withIdentifier: "commentSegue", sender: sender)
     }
 
     /*
@@ -192,14 +192,22 @@ class TimeLineTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "commentSegue" {
+            let destination = segue.destination as? CommentsTableViewController
+            let button = sender as! UIButton
+            destination!.data = [
+                "posts": self.posts,
+                "index": button.tag
+            ]
+        }
     }
-    */
 
 }

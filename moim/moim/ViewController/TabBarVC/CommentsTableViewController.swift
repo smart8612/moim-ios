@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class CommentsTableViewController: UITableViewController {
-
+    
+    var data: Any?
+    var cellDataInfo: Dictionary<String, Any>!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +22,52 @@ class CommentsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        self.cellDataInfo = self.data as? Dictionary<String, Any>
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        commentsInitialize()
+    }
+    
+    private func observeComments(snapshot: DataSnapshot) {
+        for snapshotChild in snapshot.children.allObjects {
+            let comments = snapshotChild as! DataSnapshot
+            print(comments)
+//            let postsRef = Database.database().reference().child("posts/\(friend.key)")
+//
+//            postsRef.observeSingleEvent(of: .value, with: { postSnapshot in
+//                for child in postSnapshot.children.allObjects {
+//                    let post = child as! DataSnapshot
+//                    let postDic = post.value as! Dictionary<String, Any>
+//
+//                    guard let postId = postDic["postId"] as? String else { return }
+//                    guard let text = postDic["text"] as? String else { return }
+//                    guard let url = postDic["url"] as? String else { return }
+//
+//                    let tmpPost = Post(uid: friend.key, postId: postId, text: text, url: url)
+//
+//                }
+//            })
+        }
+        
+    }
+    
+    func commentsInitialize() {
+        let posts = cellDataInfo["posts"] as! [Post]
+        let index = cellDataInfo["index"] as! Int
+        let post = posts[index]
+        let url = "posts/\(post.uid)/\(post.postId)/comments"
+        let commentsRef = Database.database().reference().child(url)
+        
+        commentsRef.observeSingleEvent(of: .value, with: {snapshot in
+            self.observeComments(snapshot: snapshot)
+        })
+        
+    
     }
 
     // MARK: - Table view data source
