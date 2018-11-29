@@ -30,7 +30,7 @@ class FriendTableViewCell: UITableViewCell {
     
     @IBAction func addButtonClicked(_ sender: UIButton) {
         let user = Auth.auth().currentUser?.uid
-        let userRef = Database.database().reference().child("users/\(user!)/friends/\(self.uid!)")
+        let userRef = Database.database().reference().child("users/\(user!)/subscribe/\(self.uid!)")
         
         userRef.observeSingleEvent(of: .value, with: { snapshot in
             
@@ -48,7 +48,7 @@ class FriendTableViewCell: UITableViewCell {
     
     func changeFollowStatus(uid: String) {
         let user = Auth.auth().currentUser?.uid
-        let userRef = Database.database().reference().child("users/\(user!)/friends/\(uid)")
+        let userRef = Database.database().reference().child("users/\(user!)/subscribe/\(uid)")
         
         userRef.observeSingleEvent(of: .value, with: { snapshot in
             

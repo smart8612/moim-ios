@@ -38,7 +38,7 @@ class TimeLineViewController: UIViewController {
         let tmpPost = Post(uid: uid, postId: postId, text: text, url: url)
         self.post = tmpPost.getPostDataDictionary()
         
-        let postRef = self.ref.child("posts/\(uid)/\(postId)")
+        let postRef = self.ref.child("post/\(uid)/\(postId)")
         
         postRef.setValue(post, withCompletionBlock: { error, ref in
             if error == nil {

@@ -13,7 +13,7 @@
 		12073E6F219484590079453F /* TimeLineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12073E6E219484590079453F /* TimeLineTableViewController.swift */; };
 		120E403C219A69F8005BBF4D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E403B219A69F8005BBF4D /* User.swift */; };
 		1215FBA321858050006B1B8F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215FBA221858050006B1B8F /* SettingViewController.swift */; };
-		12682D072156265000EF6E8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 12682D062156265000EF6E8A /* GoogleService-Info.plist */; };
+		1240BBF621AFC6090031BC40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1240BBF521AFC6080031BC40 /* GoogleService-Info.plist */; };
 		12757ACC21AD270600E7C75D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12757ACB21AD270600E7C75D /* Comment.swift */; };
 		12757ACE21AD294100E7C75D /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12757ACD21AD294100E7C75D /* CommentTableViewCell.swift */; };
 		127F3122218D7B35006AB029 /* TimelineTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127F3121218D7B35006AB029 /* TimelineTab.storyboard */; };
@@ -71,7 +71,7 @@
 		12073E6E219484590079453F /* TimeLineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewController.swift; sourceTree = "<group>"; };
 		120E403B219A69F8005BBF4D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1215FBA221858050006B1B8F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = "/Users/smart8612/Developer/moim-ios/moim/moim/ViewController/SettingViewController.swift"; sourceTree = "<absolute>"; };
-		12682D062156265000EF6E8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1240BBF521AFC6080031BC40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		12757ACB21AD270600E7C75D /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		12757ACD21AD294100E7C75D /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		127F3121218D7B35006AB029 /* TimelineTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimelineTab.storyboard; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 				12F03312215D260A00DC1020 /* ViewController */,
 				12C5B4F0215274EF000A98E3 /* Assets.xcassets */,
 				12C5B4F5215274EF000A98E3 /* Info.plist */,
-				12682D062156265000EF6E8A /* GoogleService-Info.plist */,
+				1240BBF521AFC6080031BC40 /* GoogleService-Info.plist */,
 				129AEB872169E55400BEAB6B /* Model */,
 			);
 			path = moim;
@@ -424,12 +424,12 @@
 				12A324B3218D7EA20071F365 /* NotificationTab.storyboard in Resources */,
 				12C5B4F4215274EF000A98E3 /* LaunchScreen.storyboard in Resources */,
 				12073E66219481860079453F /* PostTableViewCell.xib in Resources */,
-				12682D072156265000EF6E8A /* GoogleService-Info.plist in Resources */,
 				12AC7B292168AABF00F595CE /* art.scnassets in Resources */,
 				127F3122218D7B35006AB029 /* TimelineTab.storyboard in Resources */,
 				12A324B5218D7EDF0071F365 /* SettingTab.storyboard in Resources */,
 				12A324AF218D7D6A0071F365 /* AREventTab.storyboard in Resources */,
 				12C5B4F1215274EF000A98E3 /* Assets.xcassets in Resources */,
+				1240BBF621AFC6090031BC40 /* GoogleService-Info.plist in Resources */,
 				12A324B1218D7E240071F365 /* FriendsTab.storyboard in Resources */,
 				12C5B4EF215274EE000A98E3 /* Main.storyboard in Resources */,
 			);

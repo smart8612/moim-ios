@@ -76,7 +76,7 @@ class TimeLineTableViewController: UITableViewController {
     private func observePosts(snapshot: DataSnapshot, uid: String) {
         for snapshotChild in snapshot.children.allObjects {
             let friend = snapshotChild as! DataSnapshot
-            let postsRef = Database.database().reference().child("posts/\(friend.key)")
+            let postsRef = Database.database().reference().child("post/\(friend.key)")
             
             postsRef.observeSingleEvent(of: .value, with: { postSnapshot in
                 for child in postSnapshot.children.allObjects {
@@ -104,7 +104,7 @@ class TimeLineTableViewController: UITableViewController {
     func postsInitializer() {
         let firebaseAuth = Auth.auth()
         guard let currentUid = firebaseAuth.currentUser?.uid else { return }
-        let userRef = Database.database().reference().child("users/\(currentUid)/friends")
+        let userRef = Database.database().reference().child("users/\(currentUid)/subscribe")
         self.clearPostsList()
         userRef.observeSingleEvent(of: .value, with: {snapshot in
             if snapshot.exists() {

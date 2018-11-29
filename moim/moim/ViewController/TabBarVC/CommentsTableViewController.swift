@@ -53,7 +53,7 @@ class CommentsTableViewController: UITableViewController {
         let posts = cellDataInfo["posts"] as! [Post]
         let index = cellDataInfo["index"] as! Int
         let post = posts[index]
-        let url = "posts/\(post.uid)/\(post.postId)/comments"
+        let url = "post/\(post.uid)/\(post.postId)/comments"
         let commentsRef = Database.database().reference().child(url)
         resetComments()
         commentsRef.observeSingleEvent(of: .value, with: {snapshot in

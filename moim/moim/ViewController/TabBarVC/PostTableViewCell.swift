@@ -49,7 +49,7 @@ class PostTableViewCell: UITableViewCell {
         let currentUid = Auth.auth().currentUser?.uid
         let postId = self.post.postId
         let commentId = Date().millisecondsSince1970
-        let commentRef = Database.database().reference().child("posts/\(postUid)/\(postId)/comments/\(commentId)")
+        let commentRef = Database.database().reference().child("post/\(postUid)/\(postId)/comments/\(commentId)")
         commentRef.setValue([
             "uid": currentUid,
             "text": commentLabel.text
