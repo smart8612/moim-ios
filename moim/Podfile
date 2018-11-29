@@ -12,6 +12,7 @@ target 'moim' do
   pod 'ARCL'
   pod 'SwifterSwift'
   pod 'ViewAnimator'
+  pod 'GLTFSceneKit'
   
   # Pods for moim
 
