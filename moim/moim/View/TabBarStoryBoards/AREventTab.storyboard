@@ -16,18 +16,7 @@
                     <view key="view" contentMode="scaleToFill" id="wNG-23-MWm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOW-gU-iSW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
-                            </arscnView>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="fOW-gU-iSW" firstAttribute="top" secondItem="wNG-23-MWm" secondAttribute="top" id="BD0-R3-zaa"/>
-                            <constraint firstItem="fOW-gU-iSW" firstAttribute="trailing" secondItem="HFY-nf-5zU" secondAttribute="trailing" id="MeB-s3-hpW"/>
-                            <constraint firstItem="fOW-gU-iSW" firstAttribute="leading" secondItem="HFY-nf-5zU" secondAttribute="leading" id="Szf-gJ-5ph"/>
-                            <constraint firstItem="fOW-gU-iSW" firstAttribute="bottom" secondItem="HFY-nf-5zU" secondAttribute="bottom" id="yfg-Nf-MWA"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HFY-nf-5zU"/>
                     </view>
                     <navigationItem key="navigationItem" title="AR Events" id="qkz-OC-iVH">
@@ -37,9 +26,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="AREventSceneView" destination="fOW-gU-iSW" id="2fe-1l-CJT"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q1Z-zK-Oom" sceneMemberID="firstResponder"/>
             </objects>
