@@ -26,7 +26,16 @@ class EventMapViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-
+    func addPinToMapView(title: String?, latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        if let title = title {
+            let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = location
+            annotation.title = title
+            
+            eventMap.addAnnotation(annotation)
+        }
+    }
     
     private func intializeMapView() {
         setUpLocationManager()

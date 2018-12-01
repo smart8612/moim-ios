@@ -16,6 +16,7 @@
 		1240BBF621AFC6090031BC40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1240BBF521AFC6080031BC40 /* GoogleService-Info.plist */; };
 		1259F6B921B25BE100E1BF96 /* EventMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1259F6B821B25BE100E1BF96 /* EventMapViewController.swift */; };
 		1259F6BB21B268A200E1BF96 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1259F6BA21B268A200E1BF96 /* MapKit.framework */; };
+		1259F6BD21B26FB600E1BF96 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1259F6BC21B26FB600E1BF96 /* Event.swift */; };
 		12757ACC21AD270600E7C75D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12757ACB21AD270600E7C75D /* Comment.swift */; };
 		12757ACE21AD294100E7C75D /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12757ACD21AD294100E7C75D /* CommentTableViewCell.swift */; };
 		127F3122218D7B35006AB029 /* TimelineTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127F3121218D7B35006AB029 /* TimelineTab.storyboard */; };
@@ -76,6 +77,7 @@
 		1240BBF521AFC6080031BC40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1259F6B821B25BE100E1BF96 /* EventMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMapViewController.swift; sourceTree = "<group>"; };
 		1259F6BA21B268A200E1BF96 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1259F6BC21B26FB600E1BF96 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		12757ACB21AD270600E7C75D /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		12757ACD21AD294100E7C75D /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		127F3121218D7B35006AB029 /* TimelineTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimelineTab.storyboard; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				12073E69219481EA0079453F /* Post.swift */,
 				120E403B219A69F8005BBF4D /* User.swift */,
 				12757ACB21AD270600E7C75D /* Comment.swift */,
+				1259F6BC21B26FB600E1BF96 /* Event.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				12073E68219481970079453F /* PostTableViewCell.swift in Sources */,
 				1215FBA321858050006B1B8F /* SettingViewController.swift in Sources */,
 				12F0330F215CF6D000DC1020 /* LoginViewController.swift in Sources */,
+				1259F6BD21B26FB600E1BF96 /* Event.swift in Sources */,
 				12C66FD8215CA536001A5680 /* InitialViewController.swift in Sources */,
 				120E403C219A69F8005BBF4D /* User.swift in Sources */,
 				12D521A321AC64D4000DA6DA /* CommentsTableViewController.swift in Sources */,
