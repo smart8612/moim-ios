@@ -11,7 +11,7 @@ import CoreLocation
 
 class Event {
     // Event Unique Id
-    var eventId: Int
+    var eventId: String
     
     // Location Info
     var coordinate: CLLocationCoordinate2D
@@ -23,7 +23,7 @@ class Event {
     var uid: String
     
     
-    init(eventId: Int, coordinate: CLLocationCoordinate2D, title: String, text: String, url: String, uid: String) {
+    init(eventId: String, coordinate: CLLocationCoordinate2D, title: String, text: String, url: String, uid: String) {
         
         self.eventId = eventId
         self.coordinate = coordinate

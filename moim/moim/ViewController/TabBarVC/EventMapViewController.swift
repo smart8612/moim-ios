@@ -18,6 +18,8 @@ class EventMapViewController: UIViewController, CLLocationManagerDelegate {
     var initialLocation: CLLocation!
     var searchRadius: CLLocationDistance!
     
+    var events = [Event]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,15 +28,61 @@ class EventMapViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-    func addPinToMapView(title: String?, latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
-        if let title = title {
-            let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        eventDataInitializer()
+    }
+    
+    func addPinToMapView() {
+        for event in self.events {
             let annotation = MKPointAnnotation()
-            annotation.coordinate = location
-            annotation.title = title
+            annotation.coordinate = event.coordinate
+            annotation.title = event.title
             
             eventMap.addAnnotation(annotation)
         }
+    }
+    
+    private func eventDataInitializer() {
+        let eventRef = Database.database().reference().child("events")
+        
+        eventArrayReset()
+        
+        eventRef.observe(.value, with: { snapshot in
+            for child in snapshot.children.allObjects {
+                let event = child as! DataSnapshot
+                let eventDic = event.value as! Dictionary<String, Any>
+                
+                // Get Event Loaction
+                guard let latitude = eventDic["latitude"] else { return }
+                guard let longitude = eventDic["longitude"] else { return }
+                
+                let doubleLatitude = Double(latitude as! String)
+                let doubleLongitude = Double(longitude as! String)
+                
+                let coordinate = CLLocationCoordinate2D(latitude: doubleLatitude!, longitude: doubleLongitude!)
+                
+                // Get Event Data
+                guard let title = eventDic["title"] as? String else { return }
+                guard let text = eventDic["text"] as? String else { return }
+                guard let uid = eventDic["uid"] as? String else { return }
+                
+                // Generate New Event
+                let tmpEvent = Event(eventId: event.key, coordinate: coordinate, title: title, text: text, url: String(), uid: uid)
+                print(tmpEvent)
+                
+                self.events.append(tmpEvent)
+                print(self.events)
+                
+            }
+            self.addPinToMapView()
+            
+        })
+    }
+    
+    private func eventArrayReset() {
+        events.removeAll()
     }
     
     private func intializeMapView() {
