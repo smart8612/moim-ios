@@ -14,6 +14,8 @@
 		120E403C219A69F8005BBF4D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120E403B219A69F8005BBF4D /* User.swift */; };
 		1215FBA321858050006B1B8F /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1215FBA221858050006B1B8F /* SettingViewController.swift */; };
 		1240BBF621AFC6090031BC40 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1240BBF521AFC6080031BC40 /* GoogleService-Info.plist */; };
+		1259F6B921B25BE100E1BF96 /* EventMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1259F6B821B25BE100E1BF96 /* EventMapViewController.swift */; };
+		1259F6BB21B268A200E1BF96 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1259F6BA21B268A200E1BF96 /* MapKit.framework */; };
 		12757ACC21AD270600E7C75D /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12757ACB21AD270600E7C75D /* Comment.swift */; };
 		12757ACE21AD294100E7C75D /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12757ACD21AD294100E7C75D /* CommentTableViewCell.swift */; };
 		127F3122218D7B35006AB029 /* TimelineTab.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 127F3121218D7B35006AB029 /* TimelineTab.storyboard */; };
@@ -72,6 +74,8 @@
 		120E403B219A69F8005BBF4D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		1215FBA221858050006B1B8F /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = "/Users/smart8612/Developer/moim-ios/moim/moim/ViewController/SettingViewController.swift"; sourceTree = "<absolute>"; };
 		1240BBF521AFC6080031BC40 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1259F6B821B25BE100E1BF96 /* EventMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventMapViewController.swift; sourceTree = "<group>"; };
+		1259F6BA21B268A200E1BF96 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		12757ACB21AD270600E7C75D /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		12757ACD21AD294100E7C75D /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		127F3121218D7B35006AB029 /* TimelineTab.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimelineTab.storyboard; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1259F6BB21B268A200E1BF96 /* MapKit.framework in Frameworks */,
 				530EC40892DE1A08744DA58E /* Pods_moim.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +153,7 @@
 		12816F4E21947B9700DD3212 /* TabBarVC */ = {
 			isa = PBXGroup;
 			children = (
+				1259F6B821B25BE100E1BF96 /* EventMapViewController.swift */,
 				129AEB832169D4F300BEAB6B /* UserInformationViewController.swift */,
 				12073E67219481970079453F /* PostTableViewCell.swift */,
 				1215FBA221858050006B1B8F /* SettingViewController.swift */,
@@ -306,6 +312,7 @@
 		7DE80FCFF8A6CE769D3A09C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1259F6BA21B268A200E1BF96 /* MapKit.framework */,
 				BCC703C83D5043BF92C5EA18 /* Pods_moim.framework */,
 				B19EFFC6138B47D63557E102 /* Pods_moimTests.framework */,
 				E7D0B1C54A911B6404BA504B /* Pods_moimUITests.framework */,
@@ -385,6 +392,11 @@
 				TargetAttributes = {
 					12C5B4E3215274EE000A98E3 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					12C5B4F9215274EF000A98E3 = {
 						CreatedOnToolsVersion = 10.0;
@@ -564,6 +576,7 @@
 				12A7151521858F420002F5B7 /* NotificationTableViewController.swift in Sources */,
 				12F03311215D151600DC1020 /* SignUpViewController.swift in Sources */,
 				129AEB842169D4F300BEAB6B /* UserInformationViewController.swift in Sources */,
+				1259F6B921B25BE100E1BF96 /* EventMapViewController.swift in Sources */,
 				12A7151A21859B8B0002F5B7 /* FriendTableViewCell.swift in Sources */,
 				12C5B4EC215274EE000A98E3 /* AREventViewController.swift in Sources */,
 				12073E6A219481EA0079453F /* Post.swift in Sources */,

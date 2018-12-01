@@ -62,7 +62,7 @@
         <!--Map-->
         <scene sceneID="67C-Yv-iDn">
             <objects>
-                <viewController title="Map" id="7jz-mQ-pn5" sceneMemberID="viewController">
+                <viewController title="Map" id="7jz-mQ-pn5" customClass="EventMapViewController" customModule="moim" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iPL-kY-ka2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -80,10 +80,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pjo-No-VTb"/>
                     </view>
+                    <connections>
+                        <outlet property="eventMap" destination="LNc-lh-A4d" id="9eh-2H-FOo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tyx-ek-Kiz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2351.1999999999998" y="634.632683658171"/>
+            <point key="canvasLocation" x="-2351" y="655"/>
         </scene>
     </scenes>
     <resources>
