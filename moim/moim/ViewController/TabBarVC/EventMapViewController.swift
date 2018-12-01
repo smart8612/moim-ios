@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 import Firebase
 
-class EventMapViewController: UIViewController, CLLocationManagerDelegate {
+class EventMapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     @IBOutlet weak var eventMap: MKMapView!
     var locationManager: CLLocationManager!
     
@@ -39,6 +39,7 @@ class EventMapViewController: UIViewController, CLLocationManagerDelegate {
             let annotation = MKPointAnnotation()
             annotation.coordinate = event.coordinate
             annotation.title = event.title
+            annotation.subtitle = event.text
             
             eventMap.addAnnotation(annotation)
         }
@@ -70,10 +71,8 @@ class EventMapViewController: UIViewController, CLLocationManagerDelegate {
                 
                 // Generate New Event
                 let tmpEvent = Event(eventId: event.key, coordinate: coordinate, title: title, text: text, url: String(), uid: uid)
-                print(tmpEvent)
                 
                 self.events.append(tmpEvent)
-                print(self.events)
                 
             }
             self.addPinToMapView()
