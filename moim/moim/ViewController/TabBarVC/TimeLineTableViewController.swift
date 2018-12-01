@@ -74,6 +74,8 @@ class TimeLineTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     private func observePosts(snapshot: DataSnapshot, uid: String) {
+        addMyPosts()
+        
         for snapshotChild in snapshot.children.allObjects {
             let friend = snapshotChild as! DataSnapshot
             let postsRef = Database.database().reference().child("post/\(friend.key)")
@@ -110,6 +112,27 @@ class TimeLineTableViewController: UITableViewController {
             if snapshot.exists() {
                 self.observePosts(snapshot: snapshot, uid: currentUid)
             }
+        })
+    }
+    
+    func addMyPosts() {
+        let firebaseAuth = Auth.auth()
+        guard let currentUID = firebaseAuth.currentUser?.uid else { return }
+        let userRef = Database.database().reference().child("post/\(currentUID)")
+        
+        userRef.observeSingleEvent(of: .value, with: { snapshot in
+            for child in snapshot.children.allObjects {
+                let post = child as! DataSnapshot
+                let postDic = post.value as! Dictionary<String, Any>
+                
+                guard let postId = postDic["postId"] as? String else { return }
+                guard let text = postDic["text"] as? String else { return }
+                guard let url = postDic["url"] as? String else { return }
+                
+                let tmpPost = Post(uid: currentUID, postId: postId, text: text, url: url)
+                self.posts.append(tmpPost)
+            }
+            print(self.posts)
         })
     }
     
