@@ -9,7 +9,6 @@
 import UIKit
 import Firebase
 import ViewAnimator
-import SPPermission
 
 class TimeLineTableViewController: UITableViewController {
     
@@ -22,7 +21,6 @@ class TimeLineTableViewController: UITableViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        SPPermission.Dialog.request(with: [.camera, .locationWhenInUse], on: self)
         
         let cellNib = UINib(nibName: "PostTableViewCell", bundle: nil)
         tableView.register(cellNib, forCellReuseIdentifier: "PostTableViewCell")

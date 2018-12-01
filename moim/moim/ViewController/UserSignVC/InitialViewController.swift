@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SPPermission
 
 class InitialViewController: UIViewController {
     
@@ -17,7 +18,17 @@ class InitialViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        checkPermission()
         userSessionObserver()
+    }
+    
+    func checkPermission() {
+        let isAvailableCamera = SPPermission.isAllow(.camera)
+        let isAvailableLocation = SPPermission.isAllow(.locationWhenInUse)
+        
+        if !(isAvailableCamera && isAvailableLocation) {
+            SPPermission.Dialog.request(with: [.camera, .locationWhenInUse], on: self)
+        }
     }
     
     func userSessionObserver() {

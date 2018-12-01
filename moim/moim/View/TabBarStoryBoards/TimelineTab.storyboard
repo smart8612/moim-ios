@@ -89,12 +89,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="TimeLine" id="SAK-Pp-jBu">
-                        <barButtonItem key="leftBarButtonItem" title="User" id="v8l-vB-ggd">
+                        <barButtonItem key="leftBarButtonItem" title="User" image="user_male" id="v8l-vB-ggd">
                             <connections>
                                 <segue destination="8w4-X2-lPO" kind="show" id="Pvc-OD-5Ax"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="new" id="pKI-nr-s3K">
+                        <barButtonItem key="rightBarButtonItem" title="new" image="create_new" id="pKI-nr-s3K">
                             <connections>
                                 <segue destination="LEe-6t-8H4" kind="presentation" id="j0c-b5-iou"/>
                             </connections>
@@ -116,13 +116,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wLa-Hy-Ieg">
-                                <rect key="frame" x="90" y="238" width="195" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98W-QW-GYy">
                                 <rect key="frame" x="0.0" y="734" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -134,6 +127,13 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wLa-Hy-Ieg">
+                                <rect key="frame" x="90" y="238" width="195" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fi-GD-4s6">
                                 <rect key="frame" x="164" y="316" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -255,5 +255,7 @@
     </scenes>
     <resources>
         <image name="ball_point_pen" width="30" height="30"/>
+        <image name="create_new" width="30" height="30"/>
+        <image name="user_male" width="30" height="30"/>
     </resources>
 </document>
