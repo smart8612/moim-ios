@@ -13,6 +13,7 @@ target 'moim' do
   pod 'SwifterSwift'
   pod 'ViewAnimator'
   pod 'GLTFSceneKit'
+  pod 'SPPermission'
   
   # Pods for moim
 

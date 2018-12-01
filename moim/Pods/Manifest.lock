@@ -67,6 +67,7 @@ PODS:
     - nanopb/encode (= 0.3.901)
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
+  - SPPermission (2.1.4)
   - SwifterSwift (4.6.0):
     - SwifterSwift/AppKit (= 4.6.0)
     - SwifterSwift/CoreGraphics (= 4.6.0)
@@ -92,6 +93,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - GLTFSceneKit
+  - SPPermission
   - SwifterSwift
   - ViewAnimator
 
@@ -111,6 +113,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - SPPermission
     - SwifterSwift
     - ViewAnimator
 
@@ -129,9 +132,10 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
+  SPPermission: 89c22f936cdf07d09af2560f409fb1abd88840e3
   SwifterSwift: 812ffec6f301922f5430e75be3f2939ea3a80024
   ViewAnimator: a849844cc3698620e1a562b510ed0c28aeafcdc5
 
-PODFILE CHECKSUM: d0ec58ce7b8a3e3f02d9c0f31e4afecf99c032e7
+PODFILE CHECKSUM: 16e3c1e4ffbd8609de45aa880935ac0b0dbaf206
 
 COCOAPODS: 1.5.3

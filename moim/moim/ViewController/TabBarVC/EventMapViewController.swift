@@ -24,13 +24,13 @@ class EventMapViewController: UIViewController, CLLocationManagerDelegate, MKMap
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.intializeMapView()
         
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.intializeMapView()
         eventDataInitializer()
     }
     
