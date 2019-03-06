@@ -26,7 +26,8 @@ AR based Social Network Service Platform for Analog Meeting
 5. press " command + r " key to build and run your ios mobile device
 
 ## App User Experience
-[![Video Label](http://img.youtube.com/vi/finTlJppU2E/0.jpg)](https://www.youtube.com/watch?v=finTlJppU2E&t=0s) Video Label
+[![Video Label](http://img.youtube.com/vi/finTlJppU2E/0.jpg)](https://www.youtube.com/watch?v=finTlJppU2E&t=0s)
+click image to link youtube
 
 ## Licence
 
