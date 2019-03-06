@@ -25,7 +25,8 @@ AR based Social Network Service Platform for Analog Meeting
 4. if installing is finished, then open moim.xcworkspace
 5. press " command + r " key to build and run your ios mobile device
 
-
+## App User Experience
+![Video](https://youtu.be/finTlJppU2E=0s) Video Label
 
 ## Licence
 
